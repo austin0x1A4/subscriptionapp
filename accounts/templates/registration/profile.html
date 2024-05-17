@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% if user.is_authenticated %}
+  <h2>Welcome, {{ user.username }}!</h2>
+  <p>Email: {{ user.email }}</p>
+  
+{% else %}
+  <h2>Global Collaboration - Site for Research</h2>
+  <p>This is a site for analytics research. Please log in or sign up to access the tools and functionality.</p>
+  <div class="unauthenticated-content">
+    <p>Here's some generic information about the site:</p>
+    <img src="{% static 'analytics_app/fudbg.png' %}" alt="Data modeling img">
+    
+  </div>
+{% endif %}
+{% endblock %}

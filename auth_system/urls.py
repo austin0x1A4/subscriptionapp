@@ -1,5 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
+from django.conf import settings
 from subscription.views import home_view, subscribe, success_page, subscribed_users, others
 from django.contrib.auth.views import (
     LoginView, LogoutView, PasswordChangeView, PasswordChangeDoneView,
@@ -30,3 +32,5 @@ urlpatterns = [
     path('success/', success_page, name='success'),
     path('admin/subscribed-users/', subscribed_users, name='subscribed_users'),
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
-from .forms import SubscriptionForm
+from .forms import InvestmentForm
 from django.contrib.auth.decorators import login_required, user_passes_test
 
 # Create your views here.
@@ -10,7 +10,7 @@ def home_view(request):
 @login_required
 def subscribe(request):
     if request.method == 'POST':
-        form = SubscriptionForm(request.POST)
+        form = InvestmentForm(request.POST)
         if form.is_valid():
             subscription = form.save(commit=False)
             subscription.user = request.user
@@ -24,7 +24,7 @@ def subscribe(request):
             # Redirect to a success page or display a confirmation message
             return redirect('success')  # Replace with your actual URL
     else:
-        form = SubscriptionForm()
+        form =InvestmentForm()
 
     return render(request, 'subscription/subscribe.html', {'form': form})
 @login_required

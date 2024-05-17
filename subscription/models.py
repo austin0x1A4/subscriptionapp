@@ -1,22 +1,26 @@
-# accounts/models.py
 from django.db import models
-from django.contrib.auth.models import User
-from django_countries.fields import CountryField
 
+DURATION_CHOICES = [
+    ('1y', '1 year'),
+    ('2y', '2 years'),
+    ('4y', '4 years'),
+    ('5y', '5 years'),
+    ('6y', '6 years'),
+    ('7y', '7 years'),
+    ('8y', '8 years'),
+    ('9y', '9 years'),
+    ('10y', '10 years'),
+    
+]
 
-
-class Subscription(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    email = models.EmailField(unique=True)
-    phone_number = models.CharField(max_length=20)
-    address = models.TextField()
-    city = models.CharField(max_length=50)
-    zip_code = models.CharField(max_length=10)
-    country = CountryField()
-    comment = models.TextField(blank=True)
-    is_subscribed = models.BooleanField(default=False)  # Add this field
+class InvestmentModel(models.Model):
+    name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+    email = models.EmailField()
+    investment_amount = models.DecimalField(max_digits=10, decimal_places=2)
+    comments = models.TextField(blank=True, null=True)
+    start_date = models.DateField()
+    investment_duration = models.CharField(max_length=10, choices=DURATION_CHOICES)
 
     def __str__(self):
-        return f"{self.user.username}'s Subscription"
+        return self.name

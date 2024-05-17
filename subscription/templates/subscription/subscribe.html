@@ -4,34 +4,41 @@
 {% block title %}Subscribe{% endblock %}
 
 {% block content %}
-<div class="container py-5">
-  <div class="row justify-content-center">
-    <div class="col-md-8 col-lg-6">
-      <div class="card shadow-sm">
-        <div class="card-body">
-          <h1 class="card-title text-center mb-4">Subscribe to Fund VIP Services</h1>
-          <p class="card-text text-center mb-4">Enter your details below to subscribe:</p>
-          <form method="post" novalidate>
-            {% csrf_token %}
-            {% for field in form %}
-            <div class="form-group">
-              {{ field.label_tag }}
-              <div class="form-control {{ field.field.widget.attrs.css_classes }}">
-                {{ field }}
-              </div>
-              {% if field.help_text %}
-              <small class="form-text text-muted">{{ field.help_text }}</small>
-              {% endif %}
-              {% for error in field.errors %}
-              <div class="invalid-feedback">{{ error }}</div>
-              {% endfor %}
+<div>
+    <div>
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-sm">
+                <div>
+                    <form method="post" novalidate>
+                        {% csrf_token %}
+                        {% for field in form %}
+                        <div class="form-group">
+                            {{ field.label_tag }}
+                            {% if field.name == 'investment_amount' %}
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                </div>
+                                {{ field }}
+                            </div>
+                            {% else %}
+                            <div class="form-control {{ field.field.widget.attrs.css_classes }}">
+                                {{ field }}
+                            </div>
+                            {% endif %}
+                            {% if field.help_text %}
+                            <small class="form-text text-muted">{{ field.help_text }}</small>
+                            {% endif %}
+                            {% for error in field.errors %}
+                            <div class="invalid-feedback">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        {% endfor %}
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    </form>
+                </div>
             </div>
-            {% endfor %}
-            <button type="submit" class="btn btn-primary btn-block">Subscribe</button>
-          </form>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 {% endblock %}

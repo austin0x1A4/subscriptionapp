@@ -1,8 +1,12 @@
-# accounts/forms.py
 from django import forms
-from .models import Subscription
+from .models import InvestmentModel
+from django.forms import DateInput
 
-class SubscriptionForm(forms.ModelForm):
+class InvestmentForm(forms.ModelForm):
+    
     class Meta:
-        model = Subscription
-        fields = ['first_name', 'last_name', 'email', 'phone_number', 'address', 'city', 'zip_code', 'country', 'comment'] 
+        model = InvestmentModel
+        fields = '__all__'
+        widgets = {
+            'start_date': DateInput(attrs={'type': 'date'}),
+        }

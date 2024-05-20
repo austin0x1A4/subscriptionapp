@@ -10,6 +10,10 @@ from django.contrib.auth.views import (
 )
 from accounts.views import ProfileView, register, activate, account_settings, change_info
 
+
+from django.contrib import admin
+from django.urls import path, include
+ 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),

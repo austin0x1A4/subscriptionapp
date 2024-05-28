@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Collaboration - Site for Research</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- Ensure the path to your CSS file is correct -->
-<!-- <link href="{% static 'styles.css' %}" rel="stylesheet"> -->
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
     <div class="header bg-primary py-3">
@@ -31,30 +29,35 @@
             </div>
         </div>
     </div>
-    
-    
-    
-    <div class="menu-section bg-grey">
+
+    <div class="menu-section">
         <nav class="menu">
-            <a href="{% url 'home' %}" class="nav-link">Home</a>
-            {% if not user.is_authenticated %}
-            <a href="{% url 'register' %}" class="nav-link">Register for an account</a>
-            {% endif %}
-            <a href="{% url 'subscribe' %}" class="nav-link">Fund Services Subscription</a>
-            <a href="{% url 'others' %}" class="nav-link">Others</a>
             
+            {% if not user.is_authenticated %}
+                <a href="{% url 'home' %}" class="nav-link">Home</a>
+                <a href="{% url 'register' %}" class="nav-link">Register for an account</a>
+                <a href="{% url 'others' %}" class="nav-link">Others</a>
+            {% else %}
+                <a href="{% url 'home' %}" class="nav-link">Home</a>
+                <a href="{% url 'subscribe' %}" class="nav-link">Fund Services Subscription</a>
+                <a href="{% url 'account_balance' %}" class="nav-link">Account Balance</a>
+                <a href="{% url 'others' %}" class="nav-link">Others</a>
+            {% endif %}
         </nav>
     </div>
+    <div class="main-content-wrapper">
     <div class="main-content">
         {% block content %}
-
-        
         {% endblock %}
     </div>
+    </div>
+</div>
+
     <div class="footer">
         <a href="#">Contact</a> | <a href="#">About</a> | <a href="#">Help</a>
         <p>First United Development Materials</p>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

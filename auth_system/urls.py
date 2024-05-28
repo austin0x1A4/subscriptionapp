@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
-from subscription.views import home_view, subscribe, success_page, others
+from subscription.views import home_view, subscribe, success_page, others, account_balance
 from django.contrib.auth.views import (
     LoginView, LogoutView, PasswordChangeView, PasswordChangeDoneView,
     PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView,
@@ -32,8 +32,10 @@ urlpatterns = [
     path('accounts/reset/done/', PasswordResetCompleteView.as_view(), name='password_reset_complete'),
     path('', home_view, name='home'),
     path('subscribe/', subscribe, name='subscribe'),
+    path('account_balance/', account_balance, name='account_balance'),
     path('others/', others, name='others'),
     path('success/', success_page, name='success'),
 ]
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

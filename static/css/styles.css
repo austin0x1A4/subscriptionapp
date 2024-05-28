@@ -1,9 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
     margin: 0;
+    padding-top: 80px; /* Ensure content starts below the fixed header */
+    min-height: 100vh; /* Ensure the body takes up the full viewport height */
+    position: relative; /* Establish a positioning context for the body */
+    box-sizing: border-box; 
 }
 
 .header {
@@ -11,50 +12,51 @@ body {
     color: white;
     padding: 25px;
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+    box-sizing: border-box;
+  }
+  
 
 .header .title {
     text-align: center;
     flex-grow: 1;
 }
+
 .doddle {
-    position: absolute; /* Add this line */
+    position: absolute;
     top: 0;
-    bottom: 0;
     left: 0;
 }
-.auth {
-    position: fixed; /* Add this line */
- 
-    right: 0;
-}
 
+.auth {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
 
 .menu-section {
     background-color: grey;
     padding: 15px;
     width: 350px;
-    height: calc(100vh - 55px); /* Adjusted to start from top of header */
+    height: calc(100vh - 55px); /* Adjust height to accommodate the header */
     position: fixed;
-        /* Positioned on the right */
-    top: 55px; /* Adjusted to start just below header */
-    bottom: 0; /* Extend to bottom */
+    left: 0;
+    top: 55px; /* Position the menu below the header */
     display: flex;
-    justify-content: flex-start; /* Align content to the right */
-    flex-direction: column; /* Align items vertically */
-}
+    flex-direction: column;
+    box-sizing: border-box;
+    z-index: 999; /* Ensure the menu is below the header */
+  }
 
 .menu {
     display: flex;
     flex-direction: column;
-    margin-top: 0;
 }
 
 .menu a {
@@ -62,63 +64,83 @@ body {
     color: white;
     text-decoration: none;
 }
-
-/* Main Content Styles */
-.main-content {
-    padding: 4px;
-    margin-top: 100px; /* Adjusted to start below header */
-    margin-left: 400px; /* Adjusted to accommodate menu on the right */
-    flex-grow: 1;
-    position: relative;
-}
-
+.main-content-wrapper {
+    position: absolute; /* Position the wrapper absolutely */
+    top: 80px; /* Adjust the top position to account for the header height */
+    left: 370px; /* Adjust the left position to account for the menu width */
+    right: 0; /* Stretch the wrapper to the right edge of the viewport */
+    bottom: 0; /* Stretch the wrapper to the bottom edge of the viewport */
+    overflow-y: auto; /* Enable vertical scrolling */
+    bottom: 30px;
+  }
+  
+  .main-content {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
 .footer {
     background-color: #f2f2f2;
     padding: 10px;
     text-align: center;
     width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    height: 50px; 
 }
-/* Adjust form and widget layout */
+
+/* Additional styles */
 .filter-form {
-            margin-bottom: 20px;
-        }
-        .instrument-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-        }
-        .instrument-widget {
-            margin-right: 20px;
-            margin-bottom: 20px;
-            width: 200px;
-            border-radius: 10px;
-            background-color: #f5f5f5;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: all 0.2s ease-in-out;
-        }
-        .instrument-link {
-            text-decoration: none;
-        }
-        .instrument-widget img {
-            width: 100%;
-            height: auto;
-        }
-        .instrument-info {
-            padding: 10px;
-        }
-        /* Hover effects */
-        .instrument-widget:hover {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transform: scale(1.02);
-        }
-        .decline {
+    margin-bottom: 20px;
+}
 
-color: red;
+.instrument-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
 
+.instrument-widget {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.instrument-link {
+    text-decoration: none;
+}
+
+.instrument-widget img {
+    width: 100%;
+    height: auto;
+}
+
+.instrument-info {
+    padding: 10px;
+}
+
+.instrument-widget:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+.decline {
+    color: red;
 }
 
 .improvement {
-
-color: green;
-
+    color: green;
 }
+@media (max-width: 767px) {
+    .menu-section {
+      left: 0;.main-content-wrapper {
+        left: 0; /* Remove the left offset on smaller screens */
+      }
+    }
+  }

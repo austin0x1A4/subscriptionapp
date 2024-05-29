@@ -1,9 +1,6 @@
 from django.db import models
-import datetime
 from django.contrib.auth.models import User
-def generate_custom_account_number():
-    now = datetime.datetime.now()
-    return f"fud{now.strftime('%Y%m%d%H%M%S%f')}"
+
 
 DURATION_CHOICES = [
     ('1y', '1 year'),
@@ -32,8 +29,18 @@ class InvestmentModel(models.Model):
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    account_number = models.CharField(max_length=30, default=generate_custom_account_number, editable=False, unique=True)
-    account_balance = models.DecimalField(max_digits=10, decimal_places=2, default=10000.00)
-    
+    account_number = models.CharField(max_length=6, unique=True, editable=False)
+    account_balance = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
+
+    def save(self, *args, **kwargs):
+        if not self.account_number:
+            last_account = UserProfile.objects.all().order_by('id').last()
+            if last_account:
+                last_account_number = int(last_account.account_number)
+                self.account_number = str(last_account_number + 1).zfill(6)
+            else:
+                self.account_number = '000001'
+        super().save(*args, **kwargs)
+
     def __str__(self):
-        return self.user.username
+        return self.user

@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib.auth.decorators import login_required, user_passes_test
@@ -12,8 +12,6 @@ logger = logging.getLogger(__name__)
 def home_view(request):
     return render(request, 'subscription/home.html')
 
-logger = logging.getLogger(__name__)
-
 @login_required
 def subscribe(request):
     if request.method == 'POST':
@@ -21,14 +19,9 @@ def subscribe(request):
         if form.is_valid():
             subscription = form.save(commit=False)
             subscription.user = request.user
-            user_profile = UserProfile.objects.get(user=request.user)
-            investment_amount = subscription.investment_amount
+            subscription.save()
             
-            if user_profile.account_balance >= subscription.investment_amount:
-                user_profile.account_balance -= subscription.investment_amount
-                user_profile.save()
-                subscription.save()
-
+            try:
                 # Prepare email content with user details
                 subject = 'Subscription Confirmation'
                 message = (
@@ -48,7 +41,7 @@ def subscribe(request):
                 admin_subject = "New Subscription"
                 admin_message = (
                     f"There is a new subscriber to our services, {subscription.name}!\n\n"
-                    f"Details of your subscription:\n"
+                    f"Details of the subscription:\n"
                     f"Name: {subscription.name} {subscription.last_name}\n"
                     f"Email: {subscription.email}\n"
                     f"Investment Amount: ${subscription.investment_amount}\n"
@@ -56,37 +49,34 @@ def subscribe(request):
                     f"Start Date: {subscription.start_date}\n"
                     f"Duration: {subscription.investment_duration}\n\n"
                 )
-                admin_email = settings.ADMINS
-                try:
-                    send_mail(subject, message, sender_email, [recipient_email])
-                    send_mail(admin_subject, admin_message, sender_email, admin_email)
-                except Exception as e:
-                    logger.error(f"Error sending email to {admin_email}: {e}")
+                admin_email = [admin[1] for admin in settings.ADMINS]
 
+                send_mail(subject, message, sender_email, [recipient_email])
+                send_mail(admin_subject, admin_message, sender_email, admin_email)
+                
                 messages.success(request, "Subscription successful!")
                 return redirect('account_balance')
-            else:
-                messages.error(request, "Insufficient account balance. Please top up your account.")
-                return render(request, 'subscription/subscribe.html', {'form': form})
+            except Exception as e:
+                logger.error(f"Error sending email: {e}")
+                messages.error(request, "Subscription was successful, but we couldn't send a confirmation email.")
+        else:
+            messages.error(request, "There was an error with your form. Please check the details and try again.")
     else:
         form = InvestmentForm()
 
-    return render(request, 'subscription/subscribe.html', {'form': form})
+    return render(request, 'subscription/subscribe.html', {'form': form, 'user': request.user})
 
 @login_required
 def account_balance(request):
-    user_profile = UserProfile.objects.get(user=request.user)
-    
+    user_profile = get_object_or_404(UserProfile, user=request.user)
     subscriptions = InvestmentModel.objects.filter(user=request.user)
     total_investments = sum(subscription.investment_amount for subscription in subscriptions)
     user_email = user_profile.user.email
     context = {
         'account_number': user_profile.account_number,
-        'account_balance': user_profile.account_balance,
         'subscriptions': subscriptions,
         'total_investments': total_investments,
-        'email': user_email,
-        
+        'user_email': user_email
     }
     return render(request, 'subscription/account_balance.html', context)
 

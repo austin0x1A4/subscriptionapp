@@ -25,9 +25,10 @@ def subscribe(request):
                 # Prepare email content with user details
                 subject = 'Subscription Confirmation'
                 message = (
-                    f"Thank you for subscribing to Fund VIP Services, {subscription.name}!\n\n"
+                    f"Thank you for subscribing to Fund VIP Services, {subscription.first_name}!\n\n"
                     f"Details of your subscription:\n"
-                    f"Name: {subscription.name} {subscription.last_name}\n"
+                    f"Name: {subscription.first_name} {subscription.first_name}\n"
+                    f"Name: {subscription.last_name} {subscription.last_name}\n"
                     f"Email: {subscription.email}\n"
                     f"Investment Amount: ${subscription.investment_amount}\n"
                     f"Comments: {subscription.comments}\n"
@@ -40,9 +41,10 @@ def subscribe(request):
 
                 admin_subject = "New Subscription"
                 admin_message = (
-                    f"There is a new subscriber to our services, {subscription.name}!\n\n"
+                    f"There is a new subscriber to our services, {subscription.first_name}!\n\n"
                     f"Details of the subscription:\n"
-                    f"Name: {subscription.name} {subscription.last_name}\n"
+                    f"Name: {subscription.first_name} {subscription.first_name}\n"
+                    f"Name: {subscription.last_name} {subscription.last_name}\n"
                     f"Email: {subscription.email}\n"
                     f"Investment Amount: ${subscription.investment_amount}\n"
                     f"Comments: {subscription.comments}\n"
@@ -54,11 +56,11 @@ def subscribe(request):
                 send_mail(subject, message, sender_email, [recipient_email])
                 send_mail(admin_subject, admin_message, sender_email, admin_email)
                 
-                messages.success(request, "Subscription successful!")
+                #messages.success(request, "Subscription successful!")
                 return redirect('account_balance')
             except Exception as e:
                 logger.error(f"Error sending email: {e}")
-                messages.error(request, "Subscription was successful, but we couldn't send a confirmation email.")
+                #messages.error(request, "Subscription was successful, but we couldn't send a confirmation email.")
         else:
             messages.error(request, "There was an error with your form. Please check the details and try again.")
     else:

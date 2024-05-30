@@ -16,16 +16,13 @@ DURATION_CHOICES = [
 
 class InvestmentModel(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='investments', db_column='user_id')  # Add this line
-    name = models.CharField(max_length=255)
-    last_name = models.CharField(max_length=255)
-    email = models.EmailField()
     investment_amount = models.DecimalField(max_digits=10, decimal_places=2)
     comments = models.TextField(blank=True, null=True)
     start_date = models.DateField()
     investment_duration = models.CharField(max_length=10, choices=DURATION_CHOICES)
 
     def __str__(self):
-        return self.name
+        return f'{self.user.first_name} {self.user.last_name}'
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -43,4 +40,4 @@ class UserProfile(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return self.user
+        return self.user.username

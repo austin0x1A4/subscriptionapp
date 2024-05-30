@@ -19,7 +19,7 @@
                         {% endif %}
                         <div class="mb-3">
                             <label for="id_username" class="form-label">Username</label>
-                            <input type="text" class="form-control" id="id_username" name="username" placeholder="Username" value="{{ form.username.value }}" required autofocus>
+                            <input type="text" class="form-control" id="id_username" name="username" placeholder="Username" value="{{ form.username.value|default_if_none:'Username' }}" required autofocus>
                             {% if form.username.errors %}
                             <div class="text-danger">
                                 {{ form.username.errors }}

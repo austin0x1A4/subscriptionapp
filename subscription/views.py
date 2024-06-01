@@ -25,11 +25,11 @@ def subscribe(request):
                 # Prepare email content with user details
                 subject = 'Subscription Confirmation'
                 message = (
-                    f"Thank you for subscribing to Fund VIP Services, {subscription.first_name}!\n\n"
+                    f"Thank you for subscribing to Fund VIP Services, {subscription.user.first_name}!\n\n"
                     f"Details of your subscription:\n"
-                    f"Name: {subscription.first_name} {subscription.first_name}\n"
-                    f"Name: {subscription.last_name} {subscription.last_name}\n"
-                    f"Email: {subscription.email}\n"
+                    f"Name: {subscription.user.first_name} {subscription.first_name}\n"
+                    f"Name: {subscription.user.last_name} {subscription.last_name}\n"
+                    f"Email: {subscription.user.email}\n"
                     f"Investment Amount: ${subscription.investment_amount}\n"
                     f"Comments: {subscription.comments}\n"
                     f"Start Date: {subscription.start_date}\n"
@@ -37,15 +37,15 @@ def subscribe(request):
                     f"We appreciate your trust in our services."
                 )
                 sender_email = settings.DEFAULT_FROM_EMAIL
-                recipient_email = subscription.email
+                recipient_email = subscription.user.email
 
                 admin_subject = "New Subscription"
                 admin_message = (
-                    f"There is a new subscriber to our services, {subscription.first_name}!\n\n"
+                    f"There is a new subscriber to our services, {subscription.user.first_name}!\n\n"
                     f"Details of the subscription:\n"
-                    f"Name: {subscription.first_name} {subscription.first_name}\n"
-                    f"Name: {subscription.last_name} {subscription.last_name}\n"
-                    f"Email: {subscription.email}\n"
+                    f"Name: {subscription.user.first_name} {subscription.user.first_name}\n"
+                    f"Name: {subscription.user.last_name} {subscription.user.last_name}\n"
+                    f"Email: {subscription.user.email}\n"
                     f"Investment Amount: ${subscription.investment_amount}\n"
                     f"Comments: {subscription.comments}\n"
                     f"Start Date: {subscription.start_date}\n"

@@ -27,8 +27,8 @@ def subscribe(request):
                 message = (
                     f"Thank you for subscribing to Fund VIP Services, {subscription.user.first_name}!\n\n"
                     f"Details of your subscription:\n"
-                    f"Name: {subscription.user.first_name} {subscription.first_name}\n"
-                    f"Name: {subscription.user.last_name} {subscription.last_name}\n"
+                    f"Name: {subscription.user.first_name} {subscription.user.first_name}\n"
+                    f"Name: {subscription.user.last_name} {subscription.user.last_name}\n"
                     f"Email: {subscription.user.email}\n"
                     f"Investment Amount: ${subscription.investment_amount}\n"
                     f"Comments: {subscription.comments}\n"

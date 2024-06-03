@@ -34,8 +34,13 @@ EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 ADMINS = [('Hevl PhD', 'rbnndng@gmail.com')]
 DEFAULT_FROM_EMAIL = 'austin90.inc@gmail.com'
 
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
 
-# Application definition
+SECURE_HSTS_SECONDS = 31536000
+SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_INCLUDE = True
 
 INSTALLED_APPS = [
     'django.contrib.admin',

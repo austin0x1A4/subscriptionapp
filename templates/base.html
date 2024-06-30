@@ -41,7 +41,7 @@
                 <a href="{% url 'home' %}" class="nav-link">Home</a>
                 <a href="{% url 'subscribe' %}" class="nav-link">Fund Services Subscription</a>
                 <a href="{% url 'account_balance' %}" class="nav-link">Account Balance</a>
-                <a href="{% url 'others' %}" class="nav-link">Others</a>
+                <a href="{% url 'top10' %}" class="nav-link">Top 10</a>
             {% endif %}
         </nav>
     </div>
@@ -54,7 +54,7 @@
 </div>
 
     <div class="footer">
-        <a href="#">Contact</a> | <a href="#">About</a> | <a href="#">Help</a>
+        <a href="{% url 'contact' %}">Contact</a> | <a href="#">About</a> | <a href="#">Help</a>
         <p>First United Development Materials</p>
     </div>
 

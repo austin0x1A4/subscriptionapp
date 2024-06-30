@@ -2,14 +2,14 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
-from subscription.views import home_view, subscribe, success_page, others, account_balance
+from subscription.views import home_view, subscribe, success_page, others, account_balance, ContactView
 from django.contrib.auth.views import (
     LoginView, LogoutView, PasswordChangeView, PasswordChangeDoneView,
     PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView,
     PasswordResetCompleteView,
 )
 from accounts.views import ProfileView, register, activate, account_settings, change_info
-
+from stockist.views import top_performers, upload_file, display_ranked_companies, success
 
 from django.contrib import admin
 from django.urls import path, include
@@ -35,6 +35,12 @@ urlpatterns = [
     path('account_balance/', account_balance, name='account_balance'),
     path('others/', others, name='others'),
     path('success/', success_page, name='success'),
+    path('top10/', top_performers, name='top10'),
+    path('contact/', ContactView.as_view(), name='contact'),
+
+    path('upload/', upload_file, name='upload_file'),
+    path('ranked-companies/', display_ranked_companies, name='ranked_companies'),
+    path('success/', success, name='success'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

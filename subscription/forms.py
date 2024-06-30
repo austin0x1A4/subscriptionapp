@@ -9,3 +9,11 @@ class InvestmentForm(forms.ModelForm):
         widgets = {
             'start_date': DateInput(attrs={'type': 'date'}),
         }
+class ContactForm(forms.Form):
+    email = forms.EmailField()
+    subject = forms.CharField(max_length=100)
+    message = forms.CharField(widget=forms.Textarea)
+
+class ContactFormAuthenticated(forms.Form):
+    subject = forms.CharField(max_length=100)
+    message = forms.CharField(widget=forms.Textarea)

@@ -8,16 +8,10 @@ load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = 'django-insecure-^+0ix&(+79dd2amz8^mdg4-3#v6vjqo8o5p=25^+&w%yi(q6+b'
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-# SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = False
+
 DEBUG = os.getenv('DEBUG', False) =='True'
 #ALLOWED_HOSTS = []
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
@@ -34,13 +28,13 @@ EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 ADMINS = [('Hevl PhD', 'rbnndng@gmail.com')]
 DEFAULT_FROM_EMAIL = 'austin90.inc@gmail.com'
 
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT = True
+#SESSION_COOKIE_SECURE = True
+#CSRF_COOKIE_SECURE = True
+#SECURE_SSL_REDIRECT = True
 
-SECURE_HSTS_SECONDS = 31536000
-SECURE_HSTS_PRELOAD = True
-SECURE_HSTS_INCLUDE = True
+#SECURE_HSTS_SECONDS = 31536000
+#SECURE_HSTS_PRELOAD = True
+#SECURE_HSTS_INCLUDE = True
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -52,6 +46,8 @@ INSTALLED_APPS = [
     'accounts',
     'subscription',
     'stockist',
+    'analyst',
+    'django.contrib.humanize',
     
 ]
 

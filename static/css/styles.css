@@ -139,6 +139,32 @@ body {
 .improvement {
     color: green;
 }
+.search_bar {
+    margin-bottom: 10px;
+}
+.search_button {
+    margin-left: 10px;
+}
+.error_message {
+    color: red;
+}
+.chart-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .chart-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  @media (max-width: 767px) {
+    .chart-container {
+      height: 60vh;
+    }
+  }
 @media (max-width: 767px) {
     .menu-section {
       left: 0;.main-content-wrapper {

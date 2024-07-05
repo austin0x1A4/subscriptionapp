@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block content %}
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="search-tab" data-toggle="tab" href="#search" role="tab" aria-controls="search" aria-selected="true">Search</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" id="compare-tab" data-toggle="tab" href="#compare" role="tab" aria-controls="compare" aria-selected="false">Compare</a>
+    </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="search" role="tabpanel" aria-labelledby="search-tab">
+        <form method="POST" action="{% url 'analysis' %}">
+            {% csrf_token %}
+            <input type="text" name="symbol" placeholder="Enter ticker symbol" required>
+            <button type="submit">Enter ticker</button>
+        </form>
+        {% if symbol_data.symbol %}
+            <h2>{{ symbol_data.symbol }}</h2>
+            <script src="https://code.highcharts.com/stock/highstock.js"></script>
+            <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+            <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+            <select id="chartType">
+                <option value="candlestick" selected>Candlestick</option>
+                <option value="line">Line</option>
+            </select>
+            <div id="container" style="height: 600px; min-width: 310px"></div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    var stockData = JSON.parse('{{ symbol_data.displayed_data|safe }}');
+                    var currentRange = 1;
+                    var ohlcData = stockData.map(function(dataPoint) {
+                        return [
+                            new Date(dataPoint['Date']).getTime(),
+                            dataPoint['Open'],
+                            dataPoint['High'],
+                            dataPoint['Low'],
+                            dataPoint['Close']
+                        ];
+                    });
+                    var volumeData = stockData.map(function(dataPoint) {
+                        return [
+                            new Date(dataPoint['Date']).getTime(),
+                            dataPoint['Volume']
+                        ];
+                    });
+                    var chart = Highcharts.stockChart('container', {
+                        rangeSelector: {
+                            selected: currentRange,
+                            events: {
+                                change: function (e) {
+                                    currentRange = e.target.selectedIndex;
+                                }
+                            }
+                        },
+                        title: { text: 'Trading Chart' },
+                        yAxis: [{
+                            labels: { align: 'right', x: -3 },
+                            title: { text: 'OHLC' },
+                            height: '60%',
+                            lineWidth: 2,
+                            resize: { enabled: true }
+                        }, {
+                            labels: { align: 'right', x: -3 },
+                            title: { text: 'Volume' },
+                            top: '65%',
+                            height: '35%',
+                            offset: 0,
+                            lineWidth: 2
+                        }],
+                        series: [{
+                            type: 'candlestick',
+                            name: 'Stock',
+                            data: ohlcData,
+                            yAxis: 0,
+                            tooltip: { valueDecimals: 2 }
+                        }, {
+                            type: 'column',
+                            name: 'Volume',
+                            data: volumeData,
+                            yAxis: 1,
+                            tooltip: { valueDecimals: 0 }
+                        }]
+                    });
+                    var chartTypeSelect = document.getElementById('chartType');
+                    chartTypeSelect.addEventListener('change', function () {
+                        chart.series[0].update({ type: this.value }, true);
+                        chart.rangeSelector.clickButton(currentRange, false);
+                    });
+                });
+            </script>
+        {% endif %}
+    </div>
+    <div class="tab-pane fade" id="compare" role="tabpanel" aria-labelledby="compare-tab">
+        <form method="POST" action="{% url 'analysis' %}">
+            {% csrf_token %}
+            <input type="text" name="symbols" placeholder="Enter stock symbols (comma-separated)" required>
+            <label for="period">Select Period:</label>
+            <select id="period" name="period">
+                <option value="all">All</option>
+                <option value="monthly">Monthly</option>
+                <option value="quarterly">Quarterly</option>
+                <option value="half-yearly">Half-Yearly</option>
+                <option value="yearly">Yearly</option>
+                <option value="ytd">Year-to-date</option>
+            </select>
+            <button type="submit">Compare</button>
+        </form>
+        {% if compare_data.symbols %}
+            <h2>Selected Period: {{ compare_data.period }}</h2>
+            <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+            {% autoescape off %}
+                {{ compare_data.plot_div }}
+            {% endautoescape %}
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

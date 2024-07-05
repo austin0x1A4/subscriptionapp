@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block title %}
+   <h2>Stock Analysis</h2>
+{% endblock %}
+
+{% block content %}
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+   <ul class="nav nav-tabs" id="stockTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+         <button class="nav-link active" id="single-stock-tab" data-bs-toggle="tab" data-bs-target="#single-stock" type="button" role="tab" aria-controls="single-stock" aria-selected="true">Single Stock</button>
+      </li>
+      <li class="nav-item" role="presentation">
+         <button class="nav-link" id="stock-comparison-tab" data-bs-toggle="tab" data-bs-target="#stock-comparison" type="button" role="tab" aria-controls="stock-comparison" aria-selected="false">Stock Comparison</button>
+      </li>
+      <li class="nav-item" role="presentation">
+         <button class="nav-link" id="multi-stock-analysis-tab" data-bs-toggle="tab" data-bs-target="#multi-stock-analysis" type="button" role="tab" aria-controls="multi-stock-analysis" aria-selected="false">Multi-Stock Analysis</button>
+      </li>
+   </ul>
+
+   <div class="tab-content" id="stockTabsContent">
+      <div class="tab-pane fade show active" id="single-stock" role="tabpanel" aria-labelledby="single-stock-tab">
+         <h3>Single Stock</h3>
+         <form id="single_stock_form" method="GET">
+            <div>
+               <input type="text" class="search_bar" name="search_query1" id="single_stock_search_query1" placeholder="Type a symbol...">
+               {% if 'search_query1' in stock_not_found %}
+                  <div class="error_message">Stock not available. Try another or try later.</div>
+               {% endif %}
+            </div>
+            <button type="submit" class="search_button">Plot</button>
+         </form>
+         {% if image %}
+            <img src="data:image/png;base64,{{ image }}" alt="Stock Chart">
+         {% endif %}
+      </div>
+
+      <div class="tab-pane fade" id="stock-comparison" role="tabpanel" aria-labelledby="stock-comparison-tab">
+         <h3>Stock Comparison</h3>
+         <form id="comparison_form" method="GET">
+            <div>
+               <input type="text" class="search_bar" name="search_query1" id="comparison_search_query1" placeholder="Type first symbol...">
+               {% if 'search_query1' in stock_not_found %}
+                  <div class="error_message">Stock not available. Try another or try later.</div>
+               {% endif %}
+            </div>
+            <div>
+               <input type="text" class="search_bar" name="search_query2" id="comparison_search_query2" placeholder="Type second symbol...">
+               {% if 'search_query2' in stock_not_found %}
+                  <div class="error_message">Stock not available. Try another or try later.</div>
+               {% endif %}
+            </div>
+            <div>
+               <select class="search_bar" name="plot_type" id="plot_type">
+                  <option value="line">Line Plot</option>
+               </select>
+               <button type="submit" class="search_button">Plot</button>
+            </div>
+         </form>
+         {% if image %}
+            <img src="data:image/png;base64,{{ image }}" alt="Stock Comparison">
+         {% endif %}
+      </div>
+
+      <div class="tab-pane fade" id="multi-stock-analysis" role="tabpanel" aria-labelledby="multi-stock-analysis-tab">
+         <h3>Multi-Stock Analysis</h3>
+         <form method="post" action="{% url 'analysis' %}">
+            {% csrf_token %}
+            <div class="form-group">
+               {{ form.symbols.label_tag }}
+               {{ form.symbols }}
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+         </form>
+         {% if plot_urls %}
+            <div class="chart-container" style="height: 80vh; overflow-y: auto;">
+               {% for plot_url in plot_urls %}
+                  <div class="mb-4">
+                     <img src="data:image/png;base64,{{ plot_url }}" alt="Stock Plot" class="img-fluid">
+                  </div>
+               {% endfor %}
+            </div>
+         {% endif %}
+      </div>
+   </div>
+
+   <script>
+      $(document).ready(function() {
+         // Event handler for input on search bars and dropdown
+         $('#single_stock_search_query1, #comparison_search_query1, #comparison_search_query2, #plot_type').on('change', function() {
+            // You can add any additional functionality here, like autocomplete or symbol validation
+         });
+      });
+   </script>
+{% endblock %}

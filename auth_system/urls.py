@@ -2,17 +2,16 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
-from subscription.views import home_view, subscribe, success_page, others, account_balance, ContactView
 from django.contrib.auth.views import (
     LoginView, LogoutView, PasswordChangeView, PasswordChangeDoneView,
     PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView,
     PasswordResetCompleteView,
 )
-from accounts.views import ProfileView, register, activate, account_settings, change_info
-from stockist.views import top_performers, upload_file, display_ranked_companies, success
 
-from django.contrib import admin
-from django.urls import path, include
+from accounts.views import ProfileView, register, activate, account_settings, change_info
+from subscription.views import home_view, subscribe, success_page, others, account_balance, ContactView
+from stockist.views import top_performers, upload_file, success, get_companies_by_industry, get_top_indices, get_top_stocks
+from analyst.views import stock_analysis
  
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -39,8 +38,11 @@ urlpatterns = [
     path('contact/', ContactView.as_view(), name='contact'),
 
     path('upload/', upload_file, name='upload_file'),
-    path('ranked-companies/', display_ranked_companies, name='ranked_companies'),
+    path('api/get_companies_by_industry/', get_companies_by_industry, name='get_companies_by_industry'),
     path('success/', success, name='success'),
+    path('get_top_indices/', get_top_indices, name='get_top_indices'),
+    path('get_top_stocks/', get_top_stocks, name='get_top_stocks'),
+    path('analysis/', stock_analysis, name='analysis'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

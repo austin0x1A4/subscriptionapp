@@ -14,10 +14,11 @@ logger = logging.getLogger(__name__)
 def stock_analysis(request):
     symbol_data = {}
     compare_data = {}
-    symbols = None
-    period = None
+    active_tab = 'compare'  # Default active tab
 
     if request.method == 'POST':
+        active_tab = request.POST.get('active_tab', 'compare')  # Get the active tab from the form
+
         if 'symbol' in request.POST:
             form = StockForm(request.POST)
             if form.is_valid():
@@ -55,7 +56,6 @@ def stock_analysis(request):
                 logger.warning(f"Invalid form submission: {form.errors}")
         
         if 'symbols' in request.POST:
-            active_tab = 'compare'
             symbols = request.POST.get('symbols')
             period = request.POST.get('period')
 
@@ -89,7 +89,7 @@ def stock_analysis(request):
                 logger.warning("No symbols provided for comparison")
 
     context = {
-        "active_tab": 'compare',
+        "active_tab": active_tab,
         "symbol_data": symbol_data,
         "compare_data": compare_data,
     }

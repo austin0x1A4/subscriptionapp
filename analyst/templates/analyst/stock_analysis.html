@@ -3,41 +3,20 @@
 {% block content %}
 <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
-        <a class="nav-link active" id="compare-tab" data-toggle="tab" href="#compare" role="tab" aria-controls="compare" aria-selected="true">Compare</a>
+        <a class="nav-link {% if active_tab == 'search' %}active{% endif %}" id="search-tab" data-toggle="tab" href="#search" role="tab" aria-controls="search" aria-selected="false">Search</a>
     </li>
     <li class="nav-item" role="presentation">
-        <a class="nav-link" id="search-tab" data-toggle="tab" href="#search" role="tab" aria-controls="search" aria-selected="false">Search</a>
+        <a class="nav-link {% if active_tab == 'compare' %}active{% endif %}" id="compare-tab" data-toggle="tab" href="#compare" role="tab" aria-controls="compare" aria-selected="true">Compare</a>
     </li>
+    
 </ul>
 <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="compare" role="tabpanel" aria-labelledby="compare-tab">
-        <form method="POST" action="{% url 'analysis' %}">
-            {% csrf_token %}
-            <input type="text" name="symbols" placeholder="Enter stock symbols (comma-separated)" required>
-            <label for="period">Select Period:</label>
-            <select id="period" name="period">
-                <option value="all">All</option>
-                <option value="monthly">Monthly</option>
-                <option value="quarterly">Quarterly</option>
-                <option value="half-yearly">Half-Yearly</option>
-                <option value="yearly">Yearly</option>
-                <option value="ytd">Year-to-date</option>
-            </select>
-            <button type="submit">Compare</button>
-        </form>
-        {% if compare_data.symbols %}
-            <h2>Selected Period: {{ compare_data.period }}</h2>
-            <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-            {% autoescape off %}
-                {{ compare_data.plot_div }}
-            {% endautoescape %}
-        {% endif %}
-    </div>
-    <div class="tab-pane fade" id="search" role="tabpanel" aria-labelledby="search-tab">
+    <div class="tab-pane fade {% if active_tab == 'search' %}show active{% endif %}" id="search" role="tabpanel" aria-labelledby="search-tab">
         <form method="POST" action="{% url 'analysis' %}">
             {% csrf_token %}
             <input type="text" name="symbol" placeholder="Enter ticker symbol" required>
             <button type="submit">Enter ticker</button>
+            <input type="hidden" name="active_tab" value="search">
         </form>
         {% if symbol_data.symbol %}
             <h2>{{ symbol_data.symbol }}</h2>
@@ -115,6 +94,31 @@
             </script>
         {% endif %}
     </div>
+    <div class="tab-pane fade {% if active_tab == 'compare' %}show active{% endif %}" id="compare" role="tabpanel" aria-labelledby="compare-tab">
+        <form method="POST" action="{% url 'analysis' %}">
+            {% csrf_token %}
+            <input type="text" name="symbols" placeholder="Enter stock symbols (comma-separated)" required>
+            <label for="period">Select Period:</label>
+            <select id="period" name="period">
+                <option value="all">All</option>
+                <option value="monthly">Monthly</option>
+                <option value="quarterly">Quarterly</option>
+                <option value="half-yearly">Half-Yearly</option>
+                <option value="yearly">Yearly</option>
+                <option value="ytd">Year-to-date</option>
+            </select>
+            <button type="submit">Compare</button>
+            <input type="hidden" name="active_tab" value="compare">
+        </form>
+        {% if compare_data.symbols %}
+            <h2>Selected Period: {{ compare_data.period }}</h2>
+            <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+            {% autoescape off %}
+                {{ compare_data.plot_div }}
+            {% endautoescape %}
+        {% endif %}
+    </div>
+    
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -122,17 +126,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Get the active tab from the URL or localStorage
-        var activeTab = window.location.hash || localStorage.getItem('activeTab') || '#compare';
-        
-        // Activate the tab
-        $('a[href="' + activeTab + '"]').tab('show');
-        
-        // Store the active tab when it changes
-        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-            localStorage.setItem('activeTab', $(e.target).attr('href'));
-        });
-        
         // Set the active tab before form submission
         $('form').on('submit', function() {
             var activeTab = $('.nav-tabs .active').attr('href');

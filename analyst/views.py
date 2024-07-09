@@ -55,6 +55,7 @@ def stock_analysis(request):
                 logger.warning(f"Invalid form submission: {form.errors}")
         
         if 'symbols' in request.POST:
+            active_tab = 'compare'
             symbols = request.POST.get('symbols')
             period = request.POST.get('period')
 
@@ -88,6 +89,7 @@ def stock_analysis(request):
                 logger.warning("No symbols provided for comparison")
 
     context = {
+        "active_tab": 'compare',
         "symbol_data": symbol_data,
         "compare_data": compare_data,
     }

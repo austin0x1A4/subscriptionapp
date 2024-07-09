@@ -95,14 +95,6 @@
         </div>
 
         <div class="tab-pane fade" id="stocks" role="tabpanel" aria-labelledby="stocks-tab">
-            <div class="d-flex justify-content-end mt-3">
-                <select id="stock-sort" class="form-select w-auto">
-                    <option value="1">Composite Score</option>
-                    <option value="2">Percentage Change</option>
-                    <option value="3">Market Capitalization</option>
-                    <option value="4">Volume Traded</option>
-                </select>
-            </div>
             <table class="table table-bordered mt-3">
                 <thead>
                     <tr>
@@ -176,20 +168,6 @@
                 });
             }
         });
-    });
-
-    document.getElementById('stock-sort').addEventListener('change', function() {
-        const sortBy = this.value;
-        let tableBody = document.getElementById('stocks-table-body');
-        let rows = Array.from(tableBody.rows);
-
-        rows.sort((a, b) => {
-            let aValue = parseFloat(a.cells[sortBy].innerText.replace(/[^0-9.-]/g, ''));
-            let bValue = parseFloat(b.cells[sortBy].innerText.replace(/[^0-9.-]/g, ''));
-            return bValue - aValue;
-        });
-
-        rows.forEach(row => tableBody.appendChild(row));
     });
 </script>
 

@@ -137,14 +137,14 @@ def success(request):
     return render(request, 'stockist/success.html')
 
 def get_top_indices(request):
-    today = datetime.date.today()
-    top_indices_performers = IndexPerformance.objects.filter(date=today).order_by('-change')[:10]
+    #today = datetime.date.today()
+    top_indices_performers = IndexPerformance.objects.order_by('-change')[:10]
     indices_data = [{'name': performer.name, 'change': performer.change} for performer in top_indices_performers]
     return JsonResponse({'top_indices_performers': indices_data})
 
 def get_top_stocks(request):
-    today = datetime.date.today()
-    top_stocks_performers = StockPerformance.objects.filter(date=today).order_by('-score')[:10]
-    stocks_data = [{'name': performer.name, 'score': performer.score, 'change': performer.change,
+    #today = datetime.date.today()
+    top_stocks_performers = StockPerformance.objects.order_by('-score')[:10]
+    stocks_data = [{'name': performer.name, 'score': performer.score, 'change': performer.change, 
                     'market_cap': performer.market_cap, 'volume': performer.volume} for performer in top_stocks_performers]
     return JsonResponse({'top_stocks_performers': stocks_data})

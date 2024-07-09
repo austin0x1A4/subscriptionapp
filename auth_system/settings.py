@@ -4,18 +4,15 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-#SECRET_KEY = 'django-insecure-^+0ix&(+79dd2amz8^mdg4-3#v6vjqo8o5p=25^+&w%yi(q6+b'
+# SECRET_KEY = 'django-insecure-^+0ix&(+79dd2amz8^mdg4-3#v6vjqo8o5p=25^+&w%yi(q6+b'
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-
-DEBUG = os.getenv('DEBUG', False) =='True'
-#ALLOWED_HOSTS = []
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
+# ALLOWED_HOSTS = []
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
-
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -24,9 +21,17 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 
-# settings.py
-ADMINS = [('Hevl PhD', 'rbnndng@gmail.com')]
-DEFAULT_FROM_EMAIL = 'austin90.inc@gmail.com'
+ADMINS = [(os.getenv('ADMINS').split(',')[0], os.getenv('ADMINS').split(',')[1])]
+DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL')
+
+# Security settings
+SESSION_COOKIE_SECURE = os.getenv('SESSION_COOKIE_SECURE', 'False') == 'True'
+CSRF_COOKIE_SECURE = os.getenv('CSRF_COOKIE_SECURE', 'False') == 'True'
+SECURE_SSL_REDIRECT = os.getenv('SECURE_SSL_REDIRECT', 'False') == 'True'
+
+SECURE_HSTS_SECONDS = int(os.getenv('SECURE_HSTS_SECONDS', 0))
+SECURE_HSTS_PRELOAD = os.getenv('SECURE_HSTS_PRELOAD', 'False') == 'True'
+SECURE_HSTS_INCLUDE = os.getenv('SECURE_HSTS_INCLUDE', 'False') == 'True'
 
 #SESSION_COOKIE_SECURE = True
 #CSRF_COOKIE_SECURE = True

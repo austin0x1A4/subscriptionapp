@@ -1,0 +1,4002 @@
+[
+    {
+        "Symbol": "REAX",
+        "company_name": "Real Brokerage Inc (The)",
+        "Industry": "Real Estate",
+        "market_cap": 1064929984.0,
+        "volume": 592062.4166666666,
+        "change": 211.42856052943637
+    },
+    {
+        "Symbol": "SLG",
+        "company_name": "SL Green Realty Corp",
+        "Industry": "Real Estate",
+        "market_cap": 4177454592.0,
+        "volume": 1273539.142857143,
+        "change": 58.16074791388453
+    },
+    {
+        "Symbol": "ILPT",
+        "company_name": "Industrial Logistics Properties Trust",
+        "Industry": "Real Estate",
+        "market_cap": 326613376.0,
+        "volume": 535714.9523809524,
+        "change": 32.35293573911704
+    },
+    {
+        "Symbol": "CDRBQ",
+        "company_name": "Code Rebel Corp",
+        "Industry": "Information Technology",
+        "market_cap": 1388.0,
+        "volume": 2.191235059760956,
+        "change": 0.0
+    },
+    {
+        "Symbol": "MYSL",
+        "company_name": "My Screen Mobile Inc",
+        "Industry": "Information Technology",
+        "market_cap": 1092296.0,
+        "volume": 45000.0,
+        "change": 0.0
+    },
+    {
+        "Symbol": "ALAR",
+        "company_name": "Alarum Technologies Ltd",
+        "Industry": "Information Technology",
+        "market_cap": 70218160.0,
+        "volume": 263641.8015873016,
+        "change": 166.4893745526085
+    },
+    {
+        "Symbol": "RITT",
+        "company_name": "RiT Technologies Ltd",
+        "Industry": "Information Technology",
+        "market_cap": 310784.0,
+        "volume": 0.0,
+        "change": 0.0
+    },
+    {
+        "Symbol": "QXO",
+        "company_name": "QXO Inc",
+        "Industry": "Information Technology",
+        "market_cap": 6223335936.0,
+        "volume": 493517.2896825397,
+        "change": -44.60641576737799
+    },
+    {
+        "Symbol": "WPHM",
+        "company_name": "Winston Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 77.0,
+        "volume": 375.0,
+        "change": 0.0
+    },
+    {
+        "Symbol": "OASMY",
+        "company_name": "Vivesto AB",
+        "Industry": "Healthcare",
+        "market_cap": 13099997.0,
+        "volume": 10.864541832669323,
+        "change": 24850.000156433092
+    },
+    {
+        "Symbol": "SYRE",
+        "company_name": "Spyre Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1435426432.0,
+        "volume": 373833.09126984124,
+        "change": 100.64057047235657
+    },
+    {
+        "Symbol": "ISOLF",
+        "company_name": "Isodiol International Inc",
+        "Industry": "Healthcare",
+        "market_cap": 4914.0,
+        "volume": 0.0,
+        "change": 0.0
+    },
+    {
+        "Symbol": "FIORF",
+        "company_name": "Fiore Cannabais Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 1971.0,
+        "volume": 0.0,
+        "change": 0.0
+    },
+    {
+        "Symbol": "CNTTQ",
+        "company_name": "CannTrust Holdings Inc",
+        "Industry": "Healthcare",
+        "market_cap": 84720200.0,
+        "volume": 3739.96015936255,
+        "change": 900.0
+    },
+    {
+        "Symbol": "GEATF",
+        "company_name": "Radiko Holdings Corp.",
+        "Industry": "Healthcare",
+        "market_cap": 44531.0,
+        "volume": 24.302788844621514,
+        "change": 0.0
+    },
+    {
+        "Symbol": "SRUTF",
+        "company_name": "Sproutly Canada Inc",
+        "Industry": "Healthcare",
+        "market_cap": 5406450.0,
+        "volume": 39.8406374501992,
+        "change": -99.00000007275958
+    },
+    {
+        "Symbol": "DXBRF",
+        "company_name": "BellRock Brands Inc",
+        "Industry": "Healthcare",
+        "market_cap": 47837900.0,
+        "volume": 449.44223107569724,
+        "change": 900.0
+    },
+    {
+        "Symbol": "SLNO",
+        "company_name": "Soleno Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1921423232.0,
+        "volume": 622727.4325396825,
+        "change": 1102.6763673827152
+    },
+    {
+        "Symbol": "MYO",
+        "company_name": "Myomo  Inc",
+        "Industry": "Healthcare",
+        "market_cap": 119996424.0,
+        "volume": 438246.29365079367,
+        "change": 254.4642867596478
+    },
+    {
+        "Symbol": "ZJYL",
+        "company_name": "Jin Medical International Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 397629408.0,
+        "volume": 930874.8293650794,
+        "change": 364.35100620160733
+    },
+    {
+        "Symbol": "CADL",
+        "company_name": "Candel Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 216572400.0,
+        "volume": 1685598.238095238,
+        "change": 462.4999776482591
+    },
+    {
+        "Symbol": "ELTP",
+        "company_name": "Elite Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 373894496.0,
+        "volume": 1153703.353174603,
+        "change": 337.5000023283065
+    },
+    {
+        "Symbol": "CRBP",
+        "company_name": "Corbus Pharmaceuticals Holdings Inc",
+        "Industry": "Healthcare",
+        "market_cap": 677830656.0,
+        "volume": 355413.18253968254,
+        "change": 705.1502234926966
+    },
+    {
+        "Symbol": "TSHA",
+        "company_name": "Taysha Gene Therapies Inc",
+        "Industry": "Healthcare",
+        "market_cap": 469319488.0,
+        "volume": 2295563.73015873,
+        "change": -34.57142966134207
+    },
+    {
+        "Symbol": "LEXX",
+        "company_name": "Lexaria Bioscience Corp",
+        "Industry": "Healthcare",
+        "market_cap": 56126208.0,
+        "volume": 246790.4365079365,
+        "change": 305.25114206515536
+    },
+    {
+        "Symbol": "VERA",
+        "company_name": "Vera Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 2058780032.0,
+        "volume": 813241.8015873015,
+        "change": 97.63157493189762
+    },
+    {
+        "Symbol": "SMMT",
+        "company_name": "Summit Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 16642636800.0,
+        "volume": 2545275.4285714286,
+        "change": 1309.2024159846933
+    },
+    {
+        "Symbol": "LLBO",
+        "company_name": "Lifeline Biotechnologies Inc",
+        "Industry": "Healthcare",
+        "market_cap": 10986100.0,
+        "volume": 201821.43824701195,
+        "change": 150.0000181898945
+    },
+    {
+        "Symbol": "CHOOF",
+        "company_name": "Choom Holdings Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1783139.0,
+        "volume": 8281.96812749004,
+        "change": 0.0
+    },
+    {
+        "Symbol": "MYRX",
+        "company_name": "Myrexis Inc",
+        "Industry": "Healthcare",
+        "market_cap": 4137487.0,
+        "volume": 6439.091633466135,
+        "change": 60.97560809401088
+    },
+    {
+        "Symbol": "SLN",
+        "company_name": "Silence Therapeutics PLC",
+        "Industry": "Healthcare",
+        "market_cap": 912557632.0,
+        "volume": 160629.69047619047,
+        "change": 109.82141916316994
+    },
+    {
+        "Symbol": "WGS",
+        "company_name": "GeneDx Holdings Corp",
+        "Industry": "Healthcare",
+        "market_cap": 906931712.0,
+        "volume": 359892.3888888889,
+        "change": 605.8699853999859
+    },
+    {
+        "Symbol": "ACOGF",
+        "company_name": "Alpha Cognition Inc",
+        "Industry": "Healthcare",
+        "market_cap": 61299200.0,
+        "volume": 62934.54761904762,
+        "change": 37.931040507009456
+    },
+    {
+        "Symbol": "NTBL",
+        "company_name": "Notable Labs Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 4636560.0,
+        "volume": 182604.20238095237,
+        "change": -94.16413413970696
+    },
+    {
+        "Symbol": "OCGN",
+        "company_name": "Ocugen Inc",
+        "Industry": "Healthcare",
+        "market_cap": 356943904.0,
+        "volume": 5299857.373015873,
+        "change": 195.2381067265192
+    },
+    {
+        "Symbol": "LFMD",
+        "company_name": "LifeMD Inc",
+        "Industry": "Healthcare",
+        "market_cap": 213621744.0,
+        "volume": 755036.1507936508,
+        "change": 5.756929160604955
+    },
+    {
+        "Symbol": "CRVO",
+        "company_name": "CervoMed Inc",
+        "Industry": "Healthcare",
+        "market_cap": 128180576.0,
+        "volume": 38727.600823045264,
+        "change": 257.83408264884133
+    },
+    {
+        "Symbol": "IPCIF",
+        "company_name": "IntelliPharmaCeutics International Inc",
+        "Industry": "Healthcare",
+        "market_cap": 4963905.0,
+        "volume": 4681.494023904383,
+        "change": 87.50001164153244
+    },
+    {
+        "Symbol": "GDNSF",
+        "company_name": "Goodness Growth Holdings Inc",
+        "Industry": "Healthcare",
+        "market_cap": 0.0,
+        "volume": 112089.70517928287,
+        "change": 161.78010520219823
+    },
+    {
+        "Symbol": "APLT",
+        "company_name": "Applied Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 596624960.0,
+        "volume": 1333641.1626984128,
+        "change": 205.58823682032653
+    },
+    {
+        "Symbol": "BLTE",
+        "company_name": "Belite Bio Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1496946432.0,
+        "volume": 72535.27777777778,
+        "change": 58.817798219741924
+    },
+    {
+        "Symbol": "HRTX",
+        "company_name": "Heron Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 276035776.0,
+        "volume": 2650678.345238095,
+        "change": 45.60000419616699
+    },
+    {
+        "Symbol": "JANX",
+        "company_name": "Janux Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 2374528000.0,
+        "volume": 533575.5277777778,
+        "change": 324.231150044173
+    },
+    {
+        "Symbol": "RDGL",
+        "company_name": "Vivos Inc",
+        "Industry": "Healthcare",
+        "market_cap": 75525624.0,
+        "volume": 1101068.492063492,
+        "change": 131.77721971310078
+    },
+    {
+        "Symbol": "GYRE",
+        "company_name": "Gyre Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1243476096.0,
+        "volume": 73231.41666666667,
+        "change": 88.79432708539146
+    },
+    {
+        "Symbol": "CRDL",
+        "company_name": "Cardiol Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 146052736.0,
+        "volume": 329818.9484126984,
+        "change": 123.52940201496847
+    },
+    {
+        "Symbol": "IMNM",
+        "company_name": "Immunome Inc",
+        "Industry": "Healthcare",
+        "market_cap": 878595904.0,
+        "volume": 573433.3968253968,
+        "change": 87.32394649972522
+    },
+    {
+        "Symbol": "TWST",
+        "company_name": "Twist Bioscience Corp",
+        "Industry": "Healthcare",
+        "market_cap": 2385622016.0,
+        "volume": 1062717.9126984128,
+        "change": 77.19757194016204
+    },
+    {
+        "Symbol": "ELYM",
+        "company_name": "Eliem Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 524410784.0,
+        "volume": 289832.3134920635,
+        "change": 188.56088788133337
+    },
+    {
+        "Symbol": "SNDA",
+        "company_name": "Sonida Senior Living Inc",
+        "Industry": "Healthcare",
+        "market_cap": 480574944.0,
+        "volume": 28240.134920634922,
+        "change": 243.7665810004044
+    },
+    {
+        "Symbol": "BWAY",
+        "company_name": "Brainsway Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 125834384.0,
+        "volume": 110623.68650793651,
+        "change": 111.61472664971981
+    },
+    {
+        "Symbol": "INSM",
+        "company_name": "Insmed Inc",
+        "Industry": "Healthcare",
+        "market_cap": 12299232256.0,
+        "volume": 2129531.146825397,
+        "change": 170.0754705465065
+    },
+    {
+        "Symbol": "MREO",
+        "company_name": "Mereo BioPharma Group Plc",
+        "Industry": "Healthcare",
+        "market_cap": 721570560.0,
+        "volume": 1243935.611111111,
+        "change": 239.85507778449363
+    },
+    {
+        "Symbol": "RZLT",
+        "company_name": "Rezolute Inc",
+        "Industry": "Healthcare",
+        "market_cap": 287855872.0,
+        "volume": 323789.7817460318,
+        "change": 248.99327355587548
+    },
+    {
+        "Symbol": "AMRX",
+        "company_name": "Amneal Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 2593970432.0,
+        "volume": 1452035.0317460317,
+        "change": 118.22917452470108
+    },
+    {
+        "Symbol": "THRD",
+        "company_name": "Third Harmonic Bio Inc",
+        "Industry": "Healthcare",
+        "market_cap": 515362656.0,
+        "volume": 126057.34126984127,
+        "change": 101.2841079207244
+    },
+    {
+        "Symbol": "SKYE",
+        "company_name": "Skye Bioscience Inc",
+        "Industry": "Healthcare",
+        "market_cap": 212064704.0,
+        "volume": 87400.8253968254,
+        "change": 179.59999084472656
+    },
+    {
+        "Symbol": "TCRX",
+        "company_name": "TScan Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 313605504.0,
+        "volume": 214914.77380952382,
+        "change": 127.69231897839468
+    },
+    {
+        "Symbol": "PRAX",
+        "company_name": "Praxis Precision Medicines Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1053351168.0,
+        "volume": 209176.7857142857,
+        "change": 208.95831946697555
+    },
+    {
+        "Symbol": "FULC",
+        "company_name": "Fulcrum Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 526038752.0,
+        "volume": 677978.9841269841,
+        "change": 58.16135883383343
+    },
+    {
+        "Symbol": "BTTC",
+        "company_name": "Bitech Technologies Corp",
+        "Industry": "Healthcare",
+        "market_cap": 50023608.0,
+        "volume": 65872.50996015937,
+        "change": 39.9999985098839
+    },
+    {
+        "Symbol": "DERM",
+        "company_name": "Journey Medical Corp",
+        "Industry": "Healthcare",
+        "market_cap": 98661480.0,
+        "volume": 146905.55555555556,
+        "change": 66.43358054117519
+    },
+    {
+        "Symbol": "LRMR",
+        "company_name": "Larimar Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 503434080.0,
+        "volume": 400463.0833333333,
+        "change": 106.54450273217087
+    },
+    {
+        "Symbol": "ADMA",
+        "company_name": "ADMA Biologics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 4030005504.0,
+        "volume": 2711028.734126984,
+        "change": 352.61783292362156
+    },
+    {
+        "Symbol": "SERA",
+        "company_name": "Sera Prognostics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 246927648.0,
+        "volume": 507553.9682539682,
+        "change": 359.62733103212514
+    },
+    {
+        "Symbol": "LBPH",
+        "company_name": "Longboard Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1374319360.0,
+        "volume": 619047.8888888889,
+        "change": 470.75931348083344
+    },
+    {
+        "Symbol": "BRRN",
+        "company_name": "Born Inc",
+        "Industry": "Healthcare",
+        "market_cap": 24861.0,
+        "volume": 23.215139442231077,
+        "change": 49.999994179234186
+    },
+    {
+        "Symbol": "ENTX",
+        "company_name": "Entera Bio Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 67563760.0,
+        "volume": 111102.27777777778,
+        "change": 178.02689568154122
+    },
+    {
+        "Symbol": "TALK",
+        "company_name": "Talkspace Inc",
+        "Industry": "Healthcare",
+        "market_cap": 304463712.0,
+        "volume": 1232158.0396825396,
+        "change": 13.124994738027532
+    },
+    {
+        "Symbol": "KRRO",
+        "company_name": "Korro Bio Inc",
+        "Industry": "Healthcare",
+        "market_cap": 361166176.0,
+        "volume": 47941.73412698413,
+        "change": 76.94760274526114
+    },
+    {
+        "Symbol": "BDTX",
+        "company_name": "Black Diamond Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 342419680.0,
+        "volume": 607250.1825396825,
+        "change": 74.1379284357864
+    },
+    {
+        "Symbol": "KEQU",
+        "company_name": "Kewaunee Scientific Corp",
+        "Industry": "Healthcare",
+        "market_cap": 120705952.0,
+        "volume": 12252.146825396825,
+        "change": 136.37375462754827
+    },
+    {
+        "Symbol": "NNVC",
+        "company_name": "NanoViricides Inc",
+        "Industry": "Healthcare",
+        "market_cap": 18902400.0,
+        "volume": 139585.44047619047,
+        "change": 23.076929425347014
+    },
+    {
+        "Symbol": "ABSI",
+        "company_name": "Absci Corp",
+        "Industry": "Healthcare",
+        "market_cap": 416750528.0,
+        "volume": 1189723.4285714286,
+        "change": 121.08434639089201
+    },
+    {
+        "Symbol": "AHG",
+        "company_name": "Akso Health Group",
+        "Industry": "Healthcare",
+        "market_cap": 240587040.0,
+        "volume": 78522.13492063493,
+        "change": -0.9803912402207475
+    },
+    {
+        "Symbol": "JAN",
+        "company_name": "JanOne Inc",
+        "Industry": "Healthcare",
+        "market_cap": 27141554.0,
+        "volume": 491262.6175298805,
+        "change": 379.65443127462004
+    },
+    {
+        "Symbol": "AYRWF",
+        "company_name": "Ayr Wellness Inc",
+        "Industry": "Healthcare",
+        "market_cap": 241132896.0,
+        "volume": 289056.0396825397,
+        "change": -27.615783097488418
+    },
+    {
+        "Symbol": "NGNE",
+        "company_name": "Neurogene Inc",
+        "Industry": "Healthcare",
+        "market_cap": 492847264.0,
+        "volume": 85633.50793650794,
+        "change": 159.79451585026268
+    },
+    {
+        "Symbol": "STTK",
+        "company_name": "Shattuck Labs Inc",
+        "Industry": "Healthcare",
+        "market_cap": 184227376.0,
+        "volume": 637677.6349206349,
+        "change": 76.25569836719204
+    },
+    {
+        "Symbol": "NVAX",
+        "company_name": "Novavax Inc",
+        "Industry": "Healthcare",
+        "market_cap": 2033193728.0,
+        "volume": 9842290.551587302,
+        "change": 62.40408606751977
+    },
+    {
+        "Symbol": "MRUS",
+        "company_name": "Merus NV",
+        "Industry": "Healthcare",
+        "market_cap": 3388697344.0,
+        "volume": 636560.0119047619,
+        "change": 107.43214497951612
+    },
+    {
+        "Symbol": "MOR",
+        "company_name": "Morphosys AG, Martinsried",
+        "Industry": "Healthcare",
+        "market_cap": 2856343040.0,
+        "volume": 937241.1255411255,
+        "change": 137.89209013287484
+    },
+    {
+        "Symbol": "CALT",
+        "company_name": "Calliditas Therapeutics AB",
+        "Industry": "Healthcare",
+        "market_cap": 1088329088.0,
+        "volume": 12221.57142857143,
+        "change": 152.65162952323735
+    },
+    {
+        "Symbol": "RYTM",
+        "company_name": "Rhythm Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 3001058304.0,
+        "volume": 588818.3571428572,
+        "change": 90.27132404745306
+    },
+    {
+        "Symbol": "VKTX",
+        "company_name": "Viking Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 6055001600.0,
+        "volume": 3905484.9603174604,
+        "change": 246.3244768736694
+    },
+    {
+        "Symbol": "TEVA",
+        "company_name": "Teva Pharmaceutical Industries Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 20155183104.0,
+        "volume": 9547928.888888888,
+        "change": 74.50199725429184
+    },
+    {
+        "Symbol": "HIMS",
+        "company_name": "Hims & Hers Health Inc",
+        "Industry": "Healthcare",
+        "market_cap": 3154172416.0,
+        "volume": 6162641.281746032,
+        "change": 122.51147421322419
+    },
+    {
+        "Symbol": "BVS",
+        "company_name": "Bioventus Inc",
+        "Industry": "Healthcare",
+        "market_cap": 666861952.0,
+        "volume": 312742.4285714286,
+        "change": 220.6896350701018
+    },
+    {
+        "Symbol": "NTRA",
+        "company_name": "Natera Inc",
+        "Industry": "Healthcare",
+        "market_cap": 14684645376.0,
+        "volume": 1356100.626984127,
+        "change": 117.49405207009345
+    },
+    {
+        "Symbol": "RNA",
+        "company_name": "Avidity Biosciences Inc",
+        "Industry": "Healthcare",
+        "market_cap": 4822153216.0,
+        "volume": 1290414.126984127,
+        "change": 520.852356921821
+    },
+    {
+        "Symbol": "TPST",
+        "company_name": "Tempest Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 33274298.0,
+        "volume": 3886108.75,
+        "change": 201.36987941830492
+    },
+    {
+        "Symbol": "TCNNF",
+        "company_name": "Trulieve Cannabis Corp",
+        "Industry": "Healthcare",
+        "market_cap": 2049493632.0,
+        "volume": 462130.97222222225,
+        "change": 52.49999768204153
+    },
+    {
+        "Symbol": "CPHRF",
+        "company_name": "Cipher Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 338652896.0,
+        "volume": 14332.654761904761,
+        "change": 295.5089933417684
+    },
+    {
+        "Symbol": "RXST",
+        "company_name": "RxSight Inc",
+        "Industry": "Healthcare",
+        "market_cap": 2121442432.0,
+        "volume": 495613.99603174604,
+        "change": 77.2546397710271
+    },
+    {
+        "Symbol": "CATX",
+        "company_name": "Perspective Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1066706112.0,
+        "volume": 456259.25396825396,
+        "change": 316.31578666681725
+    },
+    {
+        "Symbol": "ADAG",
+        "company_name": "Adagene Inc",
+        "Industry": "Healthcare",
+        "market_cap": 137239472.0,
+        "volume": 54044.416666666664,
+        "change": 115.27776260066975
+    },
+    {
+        "Symbol": "OLMA",
+        "company_name": "Olema Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 706094720.0,
+        "volume": 781862.9682539683,
+        "change": -0.40387875826058744
+    },
+    {
+        "Symbol": "DYN",
+        "company_name": "Dyne Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 3256004352.0,
+        "volume": 1317641.7817460317,
+        "change": 190.07155116232252
+    },
+    {
+        "Symbol": "SRDX",
+        "company_name": "Surmodics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 565258496.0,
+        "volume": 178904.65873015873,
+        "change": 3.5816965539470993
+    },
+    {
+        "Symbol": "NKTR",
+        "company_name": "Nektar Therapeutics",
+        "Industry": "Healthcare",
+        "market_cap": 228257968.0,
+        "volume": 1761645.892857143,
+        "change": 90.76923923379601
+    },
+    {
+        "Symbol": "ACIU",
+        "company_name": "AC Immune SA",
+        "Industry": "Healthcare",
+        "market_cap": 304736128.0,
+        "volume": 308863.9880952381,
+        "change": -7.507507679512727
+    },
+    {
+        "Symbol": "ALRN",
+        "company_name": "Aileron Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 59364292.0,
+        "volume": 79265.09126984127,
+        "change": 76.7741996018871
+    },
+    {
+        "Symbol": "ESPR",
+        "company_name": "Esperion Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 339469248.0,
+        "volume": 6103843.920634921,
+        "change": 30.07518520686262
+    },
+    {
+        "Symbol": "HITI",
+        "company_name": "High Tide Inc",
+        "Industry": "Healthcare",
+        "market_cap": 176681536.0,
+        "volume": 456124.67063492065,
+        "change": 24.4318221072274
+    },
+    {
+        "Symbol": "CRNX",
+        "company_name": "Crinetics Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 4033794304.0,
+        "volume": 1017844.0317460317,
+        "change": 93.25154015842841
+    },
+    {
+        "Symbol": "CDXC",
+        "company_name": "ChromaDex Corp",
+        "Industry": "Healthcare",
+        "market_cap": 251338576.0,
+        "volume": 235683.87301587302,
+        "change": 116.33986958659308
+    },
+    {
+        "Symbol": "MNMD",
+        "company_name": "Mind Medicine (MindMed) Inc",
+        "Industry": "Healthcare",
+        "market_cap": 475554112.0,
+        "volume": 1225073.1587301588,
+        "change": 35.498845246425795
+    },
+    {
+        "Symbol": "IBRX",
+        "company_name": "ImmunityBio Inc",
+        "Industry": "Healthcare",
+        "market_cap": 2521449472.0,
+        "volume": 5009560.420634921,
+        "change": 135.064933456444
+    },
+    {
+        "Symbol": "RDNT",
+        "company_name": "RadNet Inc",
+        "Industry": "Healthcare",
+        "market_cap": 4462583296.0,
+        "volume": 530373.4563492064,
+        "change": 105.16831168191054
+    },
+    {
+        "Symbol": "TNDM",
+        "company_name": "Tandem Diabetes Care Inc",
+        "Industry": "Healthcare",
+        "market_cap": 2684060928.0,
+        "volume": 1650266.3293650793,
+        "change": 73.65522634516142
+    },
+    {
+        "Symbol": "CBWTF",
+        "company_name": "Auxly Cannabis Group Inc",
+        "Industry": "Healthcare",
+        "market_cap": 32706694.0,
+        "volume": 650688.0198412698,
+        "change": 86.42856829248531
+    },
+    {
+        "Symbol": "BYSI",
+        "company_name": "BeyondSpring Inc",
+        "Industry": "Healthcare",
+        "market_cap": 84227832.0,
+        "volume": 97285.80555555556,
+        "change": 124.97307525442329
+    },
+    {
+        "Symbol": "LLY",
+        "company_name": "Eli Lilly and Co",
+        "Industry": "Healthcare",
+        "market_cap": 811508891648.0,
+        "volume": 3088561.876984127,
+        "change": 51.32816235048278
+    },
+    {
+        "Symbol": "PRCT",
+        "company_name": "PROCEPT BioRobotics Corp",
+        "Industry": "Healthcare",
+        "market_cap": 3995671296.0,
+        "volume": 557259.6071428572,
+        "change": 126.5606728964404
+    },
+    {
+        "Symbol": "ELAN",
+        "company_name": "Elanco Animal Health Inc",
+        "Industry": "Healthcare",
+        "market_cap": 7177598976.0,
+        "volume": 4983843.198412699,
+        "change": 23.259768988987815
+    },
+    {
+        "Symbol": "BNTC",
+        "company_name": "Benitec Biopharma Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 88253376.0,
+        "volume": 37102.34920634921,
+        "change": 174.29466592624868
+    },
+    {
+        "Symbol": "PLSE",
+        "company_name": "Pulse Biosciences Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1056031872.0,
+        "volume": 220896.95238095237,
+        "change": 271.33620771602705
+    },
+    {
+        "Symbol": "PHVS",
+        "company_name": "Pharvaris NV",
+        "Industry": "Healthcare",
+        "market_cap": 1155764736.0,
+        "volume": 90255.54365079365,
+        "change": 9.183669398100145
+    },
+    {
+        "Symbol": "NTRB",
+        "company_name": "Nutriband Inc",
+        "Industry": "Healthcare",
+        "market_cap": 42942292.0,
+        "volume": 26233.5,
+        "change": 35.78947421256197
+    },
+    {
+        "Symbol": "CNTA",
+        "company_name": "Centessa Pharmaceuticals plc",
+        "Industry": "Healthcare",
+        "market_cap": 1652118144.0,
+        "volume": 285016.50396825396,
+        "change": 122.25609833661608
+    },
+    {
+        "Symbol": "AYTU",
+        "company_name": "Aytu BioPharma Inc",
+        "Industry": "Healthcare",
+        "market_cap": 14811379.0,
+        "volume": 57577.170634920636,
+        "change": 46.74555829023694
+    },
+    {
+        "Symbol": "CNTMF",
+        "company_name": "Cansortium Inc",
+        "Industry": "Healthcare",
+        "market_cap": 53366404.0,
+        "volume": 257915.27777777778,
+        "change": 71.42858359278503
+    },
+    {
+        "Symbol": "TNGX",
+        "company_name": "Tango Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 973939008.0,
+        "volume": 837814.0317460317,
+        "change": 10.181820031368371
+    },
+    {
+        "Symbol": "CLRB",
+        "company_name": "Cellectar Biosciences Inc",
+        "Industry": "Healthcare",
+        "market_cap": 75999664.0,
+        "volume": 798675.4365079365,
+        "change": -2.304156174052149
+    },
+    {
+        "Symbol": "ANNX",
+        "company_name": "Annexon Inc",
+        "Industry": "Healthcare",
+        "market_cap": 660337472.0,
+        "volume": 1524423.146825397,
+        "change": 164.83052024653693
+    },
+    {
+        "Symbol": "NUVL",
+        "company_name": "Nuvalent Inc",
+        "Industry": "Healthcare",
+        "market_cap": 5669142016.0,
+        "volume": 501314.4880952381,
+        "change": 81.8918932208307
+    },
+    {
+        "Symbol": "XTLB",
+        "company_name": "XTL Biopharmaceuticals",
+        "Industry": "Healthcare",
+        "market_cap": 14385519.0,
+        "volume": 194081.17857142858,
+        "change": 177.89475137176956
+    },
+    {
+        "Symbol": "NVO",
+        "company_name": "Novo Nordisk A/S",
+        "Industry": "Healthcare",
+        "market_cap": 577196523520.0,
+        "volume": 4381766.150793651,
+        "change": 30.07918527209456
+    },
+    {
+        "Symbol": "CDNA",
+        "company_name": "CareDx Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1505199616.0,
+        "volume": 964368.4087301587,
+        "change": 242.61706094746
+    },
+    {
+        "Symbol": "SBBCF",
+        "company_name": "Simply Better Brands Corp",
+        "Industry": "Healthcare",
+        "market_cap": 45481056.0,
+        "volume": 40994.98165137615,
+        "change": 132.10831328437806
+    },
+    {
+        "Symbol": "MEDP",
+        "company_name": "Medpace Holdings Inc",
+        "Industry": "Healthcare",
+        "market_cap": 10162390016.0,
+        "volume": 255800.45238095237,
+        "change": 17.343826966482883
+    },
+    {
+        "Symbol": "AVAH",
+        "company_name": "Aveanna Healthcare Holdings Inc",
+        "Industry": "Healthcare",
+        "market_cap": 971921728.0,
+        "volume": 172528.49206349207,
+        "change": 254.22537759333733
+    },
+    {
+        "Symbol": "NVNO",
+        "company_name": "enVVeno Medical Corporation",
+        "Industry": "Healthcare",
+        "market_cap": 70649000.0,
+        "volume": 88811.53174603175,
+        "change": 4.125737364471455
+    },
+    {
+        "Symbol": "GLSHQ",
+        "company_name": "Gelesis Holdings Inc",
+        "Industry": "Healthcare",
+        "market_cap": 154003.0,
+        "volume": 36881.62151394422,
+        "change": -95.00000011087174
+    },
+    {
+        "Symbol": "THC",
+        "company_name": "Tenet Healthcare Corp",
+        "Industry": "Healthcare",
+        "market_cap": 14815996928.0,
+        "volume": 1304176.1587301588,
+        "change": 110.68264941148978
+    },
+    {
+        "Symbol": "EWTX",
+        "company_name": "Edgewise Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1619447680.0,
+        "volume": 706269.4801587302,
+        "change": 164.06728682717656
+    },
+    {
+        "Symbol": "SRTS",
+        "company_name": "Sensus Healthcare Inc",
+        "Industry": "Healthcare",
+        "market_cap": 95712344.0,
+        "volume": 238232.1150793651,
+        "change": 104.91229291254321
+    },
+    {
+        "Symbol": "MRKR",
+        "company_name": "Marker Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 24091290.0,
+        "volume": 39944.694444444445,
+        "change": -56.0975608810555
+    },
+    {
+        "Symbol": "OILFF",
+        "company_name": "Nextleaf Solutions Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 9188419.0,
+        "volume": 35467.10358565737,
+        "change": 54.14363401432735
+    },
+    {
+        "Symbol": "MDWD",
+        "company_name": "MediWound Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 181642976.0,
+        "volume": 78523.04761904762,
+        "change": 119.55671427743691
+    },
+    {
+        "Symbol": "ENZN",
+        "company_name": "Enzon Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 9647898.0,
+        "volume": 21830.075396825396,
+        "change": 0.0
+    },
+    {
+        "Symbol": "DNTH",
+        "company_name": "Dianthus Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 816049536.0,
+        "volume": 139186.68253968254,
+        "change": 3871.428530070246
+    },
+    {
+        "Symbol": "AGIO",
+        "company_name": "Agios Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 2532880896.0,
+        "volume": 673424.2857142857,
+        "change": 65.68663590348376
+    },
+    {
+        "Symbol": "CCEL",
+        "company_name": "Cryo-Cell International Inc",
+        "Industry": "Healthcare",
+        "market_cap": 50224952.0,
+        "volume": 9757.011904761905,
+        "change": 6.495728557875684
+    },
+    {
+        "Symbol": "CGEN",
+        "company_name": "Compugen Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 173700624.0,
+        "volume": 922177.6111111111,
+        "change": 81.3084076748051
+    },
+    {
+        "Symbol": "HUMA",
+        "company_name": "Humacyte Inc",
+        "Industry": "Healthcare",
+        "market_cap": 626592768.0,
+        "volume": 1678438.2142857143,
+        "change": 41.89189006326147
+    },
+    {
+        "Symbol": "CNTB",
+        "company_name": "Connect Biopharma Holdings Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 70172576.0,
+        "volume": 168908.0357142857,
+        "change": 62.82051634741501
+    },
+    {
+        "Symbol": "ARMP",
+        "company_name": "Armata Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 86839440.0,
+        "volume": 15364.825396825398,
+        "change": -21.052627451201833
+    },
+    {
+        "Symbol": "TMDX",
+        "company_name": "TransMedics Group Inc",
+        "Industry": "Healthcare",
+        "market_cap": 4520083968.0,
+        "volume": 779388.130952381,
+        "change": 127.91868882578837
+    },
+    {
+        "Symbol": "BPMC",
+        "company_name": "Blueprint Medicines Corp",
+        "Industry": "Healthcare",
+        "market_cap": 5447079424.0,
+        "volume": 725382.8134920635,
+        "change": 60.57889652453648
+    },
+    {
+        "Symbol": "ARDX",
+        "company_name": "Ardelyx Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1339585280.0,
+        "volume": 5614898.297619048,
+        "change": 20.29598381132814
+    },
+    {
+        "Symbol": "NHIQ",
+        "company_name": "NantHealth Inc",
+        "Industry": "Healthcare",
+        "market_cap": 549428.0,
+        "volume": 2988.4462151394423,
+        "change": -95.23809519585839
+    },
+    {
+        "Symbol": "EPIX",
+        "company_name": "ESSA Pharma Inc",
+        "Industry": "Healthcare",
+        "market_cap": 287511136.0,
+        "volume": 114422.64285714286,
+        "change": 130.19537788115932
+    },
+    {
+        "Symbol": "ALVO",
+        "company_name": "Alvotech",
+        "Industry": "Healthcare",
+        "market_cap": 3297228544.0,
+        "volume": 155823.51984126985,
+        "change": 14.826496461376992
+    },
+    {
+        "Symbol": "GKOS",
+        "company_name": "Glaukos Corp",
+        "Industry": "Healthcare",
+        "market_cap": 6909475840.0,
+        "volume": 601170.8095238095,
+        "change": 65.51269691108446
+    },
+    {
+        "Symbol": "GALT",
+        "company_name": "Galectin Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 157563584.0,
+        "volume": 121875.86904761905,
+        "change": 51.49700816797803
+    },
+    {
+        "Symbol": "IRME",
+        "company_name": "IR-Med Inc",
+        "Industry": "Healthcare",
+        "market_cap": 25466078.0,
+        "volume": 453.48605577689244,
+        "change": -69.74789941220807
+    },
+    {
+        "Symbol": "PNTG",
+        "company_name": "Pennant Group Inc (The)",
+        "Industry": "Healthcare",
+        "market_cap": 970541312.0,
+        "volume": 156823.2380952381,
+        "change": 180.6113677147506
+    },
+    {
+        "Symbol": "LPCN",
+        "company_name": "Lipocine Inc",
+        "Industry": "Healthcare",
+        "market_cap": 21284802.0,
+        "volume": 40261.26190476191,
+        "change": 6.133333841959635
+    },
+    {
+        "Symbol": "TARS",
+        "company_name": "Tarsus Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1196031104.0,
+        "volume": 674868.1865079365,
+        "change": 85.15901873762274
+    },
+    {
+        "Symbol": "NAMS",
+        "company_name": "NewAmsterdam Pharma Company NV",
+        "Industry": "Healthcare",
+        "market_cap": 1482553600.0,
+        "volume": 211360.04365079364,
+        "change": 64.86486176877092
+    },
+    {
+        "Symbol": "CRDF",
+        "company_name": "Cardiff Oncology Inc",
+        "Industry": "Healthcare",
+        "market_cap": 106598584.0,
+        "volume": 870395.5714285715,
+        "change": 16.836730473640394
+    },
+    {
+        "Symbol": "GPCR",
+        "company_name": "Structure Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1968703488.0,
+        "volume": 899488.5158730159,
+        "change": 16.757119075362915
+    },
+    {
+        "Symbol": "CGEM",
+        "company_name": "Cullinan Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1033142976.0,
+        "volume": 531674.4841269841,
+        "change": 68.43100022048085
+    },
+    {
+        "Symbol": "BKD",
+        "company_name": "Brookdale Senior Living Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1321246592.0,
+        "volume": 1888733.5753968253,
+        "change": 70.91835915471371
+    },
+    {
+        "Symbol": "MAIA",
+        "company_name": "MAIA Biotechnology Inc",
+        "Industry": "Healthcare",
+        "market_cap": 78415616.0,
+        "volume": 331120.0119047619,
+        "change": 86.36363574788591
+    },
+    {
+        "Symbol": "BBIO",
+        "company_name": "BridgeBio Pharma Inc",
+        "Industry": "Healthcare",
+        "market_cap": 5639109632.0,
+        "volume": 1756873.1626984128,
+        "change": 5.11741692721396
+    },
+    {
+        "Symbol": "NHC",
+        "company_name": "National HealthCare Corp",
+        "Industry": "Healthcare",
+        "market_cap": 1910620416.0,
+        "volume": 74732.86507936507,
+        "change": 82.86094870521602
+    },
+    {
+        "Symbol": "RENB",
+        "company_name": "Renovaro Inc",
+        "Industry": "Healthcare",
+        "market_cap": 105023704.0,
+        "volume": 428891.18253968254,
+        "change": -81.04722250957549
+    },
+    {
+        "Symbol": "ECOR",
+        "company_name": "electroCore Inc",
+        "Industry": "Healthcare",
+        "market_cap": 38687668.0,
+        "volume": 12789.051587301587,
+        "change": 3.6442135934003765
+    },
+    {
+        "Symbol": "OWLT",
+        "company_name": "Owlet Inc",
+        "Industry": "Healthcare",
+        "market_cap": 49183256.0,
+        "volume": 26109.45634920635,
+        "change": 23.167146731669405
+    },
+    {
+        "Symbol": "EUDA",
+        "company_name": "EUDA Health Holdings Limited",
+        "Industry": "Healthcare",
+        "market_cap": 125756448.0,
+        "volume": 83265.0,
+        "change": 143.53740503601662
+    },
+    {
+        "Symbol": "LQDA",
+        "company_name": "Liquidia Corp",
+        "Industry": "Healthcare",
+        "market_cap": 683463872.0,
+        "volume": 934725.0198412698,
+        "change": 26.062318564641796
+    },
+    {
+        "Symbol": "PETQ",
+        "company_name": "PetIQ Inc",
+        "Industry": "Healthcare",
+        "market_cap": 916597504.0,
+        "volume": 428981.1111111111,
+        "change": 76.16312662319095
+    },
+    {
+        "Symbol": "KSIOF",
+        "company_name": "kneat.com Inc",
+        "Industry": "Healthcare",
+        "market_cap": 309743904.0,
+        "volume": 3988.4462151394423,
+        "change": 56.639936302714254
+    },
+    {
+        "Symbol": "GTBIF",
+        "company_name": "Green Thumb Industries Inc",
+        "Industry": "Healthcare",
+        "market_cap": 2441404416.0,
+        "volume": 455496.78571428574,
+        "change": -12.121216499882035
+    },
+    {
+        "Symbol": "RGLS",
+        "company_name": "Regulus Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 99508168.0,
+        "volume": 1034485.869047619,
+        "change": 1.3333320617675781
+    },
+    {
+        "Symbol": "GDRX",
+        "company_name": "GoodRx Holdings Inc",
+        "Industry": "Healthcare",
+        "market_cap": 2933171712.0,
+        "volume": 1431978.2222222222,
+        "change": 25.08090993186244
+    },
+    {
+        "Symbol": "ZIMV",
+        "company_name": "ZimVie Inc",
+        "Industry": "Healthcare",
+        "market_cap": 461000480.0,
+        "volume": 326876.6666666667,
+        "change": 52.694060315938806
+    },
+    {
+        "Symbol": "ALT",
+        "company_name": "Altimmune Inc",
+        "Industry": "Healthcare",
+        "market_cap": 494654176.0,
+        "volume": 5200358.444444444,
+        "change": 186.4197467877022
+    },
+    {
+        "Symbol": "NSPR",
+        "company_name": "InspireMD Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 71978760.0,
+        "volume": 27965.26984126984,
+        "change": -21.568627320031535
+    },
+    {
+        "Symbol": "UCBJY",
+        "company_name": "UCB SA",
+        "Industry": "Healthcare",
+        "market_cap": 33751099392.0,
+        "volume": 17060.718253968254,
+        "change": 101.0396634548027
+    },
+    {
+        "Symbol": "NUVB",
+        "company_name": "Nuvation Bio Inc",
+        "Industry": "Healthcare",
+        "market_cap": 732780288.0,
+        "volume": 1374236.0277777778,
+        "change": 90.90909935366889
+    },
+    {
+        "Symbol": "KURA",
+        "company_name": "Kura Oncology Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1512764928.0,
+        "volume": 957254.7063492064,
+        "change": 97.39999771118164
+    },
+    {
+        "Symbol": "ABIO",
+        "company_name": "ARCA biopharma Inc",
+        "Industry": "Healthcare",
+        "market_cap": 34817184.0,
+        "volume": 35224.00406504065,
+        "change": 17.073165814885616
+    },
+    {
+        "Symbol": "CSTL",
+        "company_name": "Castle Biosciences Inc",
+        "Industry": "Healthcare",
+        "market_cap": 812688192.0,
+        "volume": 287891.873015873,
+        "change": 56.183362897575684
+    },
+    {
+        "Symbol": "COLL",
+        "company_name": "Collegium Pharmaceutical Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1161951744.0,
+        "volume": 416603.0634920635,
+        "change": 54.40924123452484
+    },
+    {
+        "Symbol": "ORIC",
+        "company_name": "ORIC Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 702603264.0,
+        "volume": 503373.5873015873,
+        "change": 12.415354673752416
+    },
+    {
+        "Symbol": "NPCE",
+        "company_name": "NeuroPace Inc",
+        "Industry": "Healthcare",
+        "market_cap": 206714752.0,
+        "volume": 90046.97222222222,
+        "change": -1.8030528953274325
+    },
+    {
+        "Symbol": "JSPR",
+        "company_name": "Jasper Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 306486560.0,
+        "volume": 115747.49206349206,
+        "change": 163.50651192371598
+    },
+    {
+        "Symbol": "COYA",
+        "company_name": "Coya Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 88283544.0,
+        "volume": 61115.19047619047,
+        "change": 14.173233815789917
+    },
+    {
+        "Symbol": "MCK",
+        "company_name": "McKesson Corp",
+        "Industry": "Healthcare",
+        "market_cap": 65581551616.0,
+        "volume": 780443.2182539683,
+        "change": 19.304085460738765
+    },
+    {
+        "Symbol": "BSX",
+        "company_name": "Boston Scientific Corp",
+        "Industry": "Healthcare",
+        "market_cap": 122316644352.0,
+        "volume": 6530230.388888889,
+        "change": 52.23606207468766
+    },
+    {
+        "Symbol": "ASND",
+        "company_name": "Ascendis Pharma AS",
+        "Industry": "Healthcare",
+        "market_cap": 6581463040.0,
+        "volume": 436199.52777777775,
+        "change": 14.691190222175049
+    },
+    {
+        "Symbol": "BETRF",
+        "company_name": "Betterlife Pharma Inc",
+        "Industry": "Healthcare",
+        "market_cap": 14314099.0,
+        "volume": 25562.119047619046,
+        "change": 61.290327620059806
+    },
+    {
+        "Symbol": "ZHCLF",
+        "company_name": "Zenith Capital Corp",
+        "Industry": "Healthcare",
+        "market_cap": 18676190.0,
+        "volume": 11450.936254980079,
+        "change": 29.999993294477562
+    },
+    {
+        "Symbol": "RVMD",
+        "company_name": "Revolution Medicines Inc",
+        "Industry": "Healthcare",
+        "market_cap": 6953833984.0,
+        "volume": 1678442.0277777778,
+        "change": 26.650448496769
+    },
+    {
+        "Symbol": "IDYA",
+        "company_name": "IDEAYA Biosciences Inc",
+        "Industry": "Healthcare",
+        "market_cap": 3095402240.0,
+        "volume": 851361.6706349206,
+        "change": 26.563034279962405
+    },
+    {
+        "Symbol": "BHVN",
+        "company_name": "Biohaven Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 3397850368.0,
+        "volume": 1188116.146825397,
+        "change": 91.88467434643522
+    },
+    {
+        "Symbol": "VRTX",
+        "company_name": "Vertex Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 121509257216.0,
+        "volume": 1232297.4285714286,
+        "change": 35.58550691901398
+    },
+    {
+        "Symbol": "CURLF",
+        "company_name": "Curaleaf Holdings Inc",
+        "Industry": "Healthcare",
+        "market_cap": 2213304576.0,
+        "volume": 723029.4285714285,
+        "change": -43.511447186278446
+    },
+    {
+        "Symbol": "MEDXF",
+        "company_name": "Medexus Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 48695644.0,
+        "volume": 13026.984126984127,
+        "change": -20.242914745281603
+    },
+    {
+        "Symbol": "MLTX",
+        "company_name": "MoonLake Immunotherapeutics",
+        "Industry": "Healthcare",
+        "market_cap": 2930608640.0,
+        "volume": 476215.3888888889,
+        "change": -11.440518015890513
+    },
+    {
+        "Symbol": "VRCA",
+        "company_name": "Verrica Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 83203776.0,
+        "volume": 530602.1785714285,
+        "change": -53.46062002258547
+    },
+    {
+        "Symbol": "IINN",
+        "company_name": "Inspira Technologies Oxy B.H.N. Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 20723920.0,
+        "volume": 527824.2976190476,
+        "change": -19.999998297010123
+    },
+    {
+        "Symbol": "AORT",
+        "company_name": "Artivion Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1023877184.0,
+        "volume": 226379.90476190476,
+        "change": 55.37190874312633
+    },
+    {
+        "Symbol": "ELDN",
+        "company_name": "Eledon Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 105087608.0,
+        "volume": 116409.71031746031,
+        "change": 100.75757500499189
+    },
+    {
+        "Symbol": "UFPT",
+        "company_name": "UFP Technologies Inc",
+        "Industry": "Healthcare",
+        "market_cap": 2242601472.0,
+        "volume": 60418.12301587302,
+        "change": 79.82769305889423
+    },
+    {
+        "Symbol": "VPTDF",
+        "company_name": "VentriPoint Diagnostics Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 19647876.0,
+        "volume": 39562.44841269841,
+        "change": -26.470589008710782
+    },
+    {
+        "Symbol": "YMAB",
+        "company_name": "Y-mAbs Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 597235328.0,
+        "volume": 304279.2817460318,
+        "change": 159.18760968637952
+    },
+    {
+        "Symbol": "MODD",
+        "company_name": "Modular Med Inc",
+        "Industry": "Healthcare",
+        "market_cap": 67076484.0,
+        "volume": 182628.5992063492,
+        "change": 88.99081465110558
+    },
+    {
+        "Symbol": "APM",
+        "company_name": "Aptorum Group Limited",
+        "Industry": "Healthcare",
+        "market_cap": 15866191.0,
+        "volume": 610974.2063492064,
+        "change": 27.75330923940271
+    },
+    {
+        "Symbol": "HALO",
+        "company_name": "Halozyme Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 7506937856.0,
+        "volume": 1163185.4801587302,
+        "change": 58.026662190755204
+    },
+    {
+        "Symbol": "HCM",
+        "company_name": "HUTCHMED (China) Limited",
+        "Industry": "Healthcare",
+        "market_cap": 2739334656.0,
+        "volume": 131535.79365079364,
+        "change": 7.224086228489781
+    },
+    {
+        "Symbol": "SWTX",
+        "company_name": "SpringWorks Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 2889962496.0,
+        "volume": 985791.630952381,
+        "change": 42.99890171483335
+    },
+    {
+        "Symbol": "SYRS",
+        "company_name": "Syros Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 41823288.0,
+        "volume": 201472.82142857142,
+        "change": -60.506331039303994
+    },
+    {
+        "Symbol": "EYPT",
+        "company_name": "EyePoint Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 429751136.0,
+        "volume": 1038580.123015873,
+        "change": -31.072961408523803
+    },
+    {
+        "Symbol": "NBIX",
+        "company_name": "Neurocrine Biosciences Inc",
+        "Industry": "Healthcare",
+        "market_cap": 12026241024.0,
+        "volume": 815092.9285714285,
+        "change": 8.628237082392591
+    },
+    {
+        "Symbol": "ELUT",
+        "company_name": "Elutia Inc",
+        "Industry": "Healthcare",
+        "market_cap": 141350256.0,
+        "volume": 142718.19444444444,
+        "change": 229.36508942683608
+    },
+    {
+        "Symbol": "ITGR",
+        "company_name": "Integer Holdings Corp",
+        "Industry": "Healthcare",
+        "market_cap": 4129702656.0,
+        "volume": 297774.01587301586,
+        "change": 50.360149134118245
+    },
+    {
+        "Symbol": "DVA",
+        "company_name": "DaVita Inc",
+        "Industry": "Healthcare",
+        "market_cap": 12882845696.0,
+        "volume": 960086.5714285715,
+        "change": 59.51589408282847
+    },
+    {
+        "Symbol": "PHG",
+        "company_name": "Koninklijke Philips NV",
+        "Industry": "Healthcare",
+        "market_cap": 27994337280.0,
+        "volume": 1015425.7380952381,
+        "change": 37.4017589758481
+    },
+    {
+        "Symbol": "CASI",
+        "company_name": "CASI Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 113484480.0,
+        "volume": 131905.55555555556,
+        "change": 236.6972443953317
+    },
+    {
+        "Symbol": "IGC",
+        "company_name": "IGC Pharma Inc",
+        "Industry": "Healthcare",
+        "market_cap": 27834196.0,
+        "volume": 455039.00793650793,
+        "change": -20.000001295753123
+    },
+    {
+        "Symbol": "CTLT",
+        "company_name": "Catalent Inc",
+        "Industry": "Healthcare",
+        "market_cap": 10842474496.0,
+        "volume": 2156660.0674603176,
+        "change": 21.889023749564114
+    },
+    {
+        "Symbol": "ICLR",
+        "company_name": "ICON Public Limited Company",
+        "Industry": "Healthcare",
+        "market_cap": 23228401664.0,
+        "volume": 544609.253968254,
+        "change": 9.794098338251853
+    },
+    {
+        "Symbol": "SRRK",
+        "company_name": "Scholar Rock Holding Corp",
+        "Industry": "Healthcare",
+        "market_cap": 719493056.0,
+        "volume": 840230.7817460317,
+        "change": 45.94155834102775
+    },
+    {
+        "Symbol": "WVE",
+        "company_name": "Wave Life Sciences Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 743438464.0,
+        "volume": 735335.0793650794,
+        "change": 26.80851659606433
+    },
+    {
+        "Symbol": "VTGN",
+        "company_name": "Vistagen Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 86576320.0,
+        "volume": 316945.4246031746,
+        "change": -51.8796992211636
+    },
+    {
+        "Symbol": "CRON",
+        "company_name": "Cronos Group Inc",
+        "Industry": "Healthcare",
+        "market_cap": 841018176.0,
+        "volume": 2173520.5753968256,
+        "change": -8.333334989017844
+    },
+    {
+        "Symbol": "CORT",
+        "company_name": "Corcept Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 3660354560.0,
+        "volume": 1072337.9285714286,
+        "change": 6.022995788823723
+    },
+    {
+        "Symbol": "LNSR",
+        "company_name": "LENSAR Inc",
+        "Industry": "Healthcare",
+        "market_cap": 53862976.0,
+        "volume": 28330.781746031746,
+        "change": 52.131145541881274
+    },
+    {
+        "Symbol": "TYRA",
+        "company_name": "Tyra Biosciences Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1132690944.0,
+        "volume": 122845.6746031746,
+        "change": 43.19093069703281
+    },
+    {
+        "Symbol": "MEDS",
+        "company_name": "TRxADE HEALTH Inc",
+        "Industry": "Healthcare",
+        "market_cap": 11480393.0,
+        "volume": 153712.8492063492,
+        "change": -37.87879088912335
+    },
+    {
+        "Symbol": "PCVX",
+        "company_name": "Vaxcyte Inc",
+        "Industry": "Healthcare",
+        "market_cap": 14387298304.0,
+        "volume": 788753.753968254,
+        "change": 121.7283621077855
+    },
+    {
+        "Symbol": "XOMA",
+        "company_name": "XOMA Corp",
+        "Industry": "Healthcare",
+        "market_cap": 324214656.0,
+        "volume": 23022.10714285714,
+        "change": 78.70968234154486
+    },
+    {
+        "Symbol": "AMGN",
+        "company_name": "Amgen Inc",
+        "Industry": "Healthcare",
+        "market_cap": 176743628800.0,
+        "volume": 2517721.3571428573,
+        "change": 25.68011276998326
+    },
+    {
+        "Symbol": "SNDL",
+        "company_name": "SNDL Inc",
+        "Industry": "Healthcare",
+        "market_cap": 556659584.0,
+        "volume": 4046910.484126984,
+        "change": -3.669732095175381
+    },
+    {
+        "Symbol": "NVLPF",
+        "company_name": "Nova Leap Health Corp",
+        "Industry": "Healthcare",
+        "market_cap": 15568456.0,
+        "volume": 9296.358565737051,
+        "change": 10.48491950785548
+    },
+    {
+        "Symbol": "INO",
+        "company_name": "Inovio Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 166950448.0,
+        "volume": 375542.8611111111,
+        "change": 16.485504539066483
+    },
+    {
+        "Symbol": "GCTK",
+        "company_name": "GlucoTrack Inc",
+        "Industry": "Healthcare",
+        "market_cap": 15449200.0,
+        "volume": 37375.34523809524,
+        "change": 95.83332091569949
+    },
+    {
+        "Symbol": "UHS",
+        "company_name": "Universal Health Services Inc.",
+        "Industry": "Healthcare",
+        "market_cap": 15055834112.0,
+        "volume": 610776.3888888889,
+        "change": 72.72308767065121
+    },
+    {
+        "Symbol": "CYTK",
+        "company_name": "Cytokinetics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 6371289088.0,
+        "volume": 2244895.293650794,
+        "change": 55.91708102392935
+    },
+    {
+        "Symbol": "ISRG",
+        "company_name": "Intuitive Surgical Inc",
+        "Industry": "Healthcare",
+        "market_cap": 172076613632.0,
+        "volume": 1607458.0317460317,
+        "change": 60.15874994511681
+    },
+    {
+        "Symbol": "NKTX",
+        "company_name": "Nkarta Inc",
+        "Industry": "Healthcare",
+        "market_cap": 459337792.0,
+        "volume": 1589632.869047619,
+        "change": 280.7017592781076
+    },
+    {
+        "Symbol": "REGN",
+        "company_name": "Regeneron Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 125265543168.0,
+        "volume": 477607.3611111111,
+        "change": 36.32981844031541
+    },
+    {
+        "Symbol": "COR",
+        "company_name": "Cencora Inc",
+        "Industry": "Healthcare",
+        "market_cap": 46557782016.0,
+        "volume": 1372738.5833333333,
+        "change": 33.646545034205424
+    },
+    {
+        "Symbol": "AUTL",
+        "company_name": "Autolus Therapeutics Plc",
+        "Industry": "Healthcare",
+        "market_cap": 1096307200.0,
+        "volume": 1241318.1825396826,
+        "change": 35.08196557282566
+    },
+    {
+        "Symbol": "APNHY",
+        "company_name": "Aspen Pharmacare Holdings Plc",
+        "Industry": "Healthcare",
+        "market_cap": 5037659136.0,
+        "volume": 248.20717131474103,
+        "change": 35.80837885652742
+    },
+    {
+        "Symbol": "CHEOY",
+        "company_name": "Cochlear Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 12452995072.0,
+        "volume": 4584.480158730159,
+        "change": 10.011586424239937
+    },
+    {
+        "Symbol": "ANIP",
+        "company_name": "ANI Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1166749952.0,
+        "volume": 188873.4007936508,
+        "change": -10.717734008413206
+    },
+    {
+        "Symbol": "NRIX",
+        "company_name": "Nurix Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1572938624.0,
+        "volume": 833704.4523809524,
+        "change": 162.01717678011707
+    },
+    {
+        "Symbol": "EHC",
+        "company_name": "Encompass Health Corp",
+        "Industry": "Healthcare",
+        "market_cap": 9224293376.0,
+        "volume": 631146.9880952381,
+        "change": 32.471101461911125
+    },
+    {
+        "Symbol": "CLLS",
+        "company_name": "Cellectis SA",
+        "Industry": "Healthcare",
+        "market_cap": 222208688.0,
+        "volume": 517223.0515873016,
+        "change": 27.58620784153221
+    },
+    {
+        "Symbol": "ADCT",
+        "company_name": "ADC Therapeutics SA",
+        "Industry": "Healthcare",
+        "market_cap": 283176896.0,
+        "volume": 635649.2380952381,
+        "change": 181.7307859835546
+    },
+    {
+        "Symbol": "EOLS",
+        "company_name": "Evolus Inc",
+        "Industry": "Healthcare",
+        "market_cap": 957774528.0,
+        "volume": 588984.9404761905,
+        "change": 58.95287960206517
+    },
+    {
+        "Symbol": "FEMY",
+        "company_name": "Femasys Inc",
+        "Industry": "Healthcare",
+        "market_cap": 23789098.0,
+        "volume": 2910855.1507936507,
+        "change": 166.8329353868546
+    },
+    {
+        "Symbol": "SPRY",
+        "company_name": "ARS Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1115797888.0,
+        "volume": 876171.4841269841,
+        "change": 53.877008015135374
+    },
+    {
+        "Symbol": "ONCT",
+        "company_name": "Oncternal Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 12326900.0,
+        "volume": 10253.253968253968,
+        "change": -34.92187656578605
+    },
+    {
+        "Symbol": "PVCT",
+        "company_name": "Provectus Biopharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 47869400.0,
+        "volume": 262423.1984126984,
+        "change": 13.999998360872294
+    },
+    {
+        "Symbol": "SVRA",
+        "company_name": "Savara Inc",
+        "Industry": "Healthcare",
+        "market_cap": 724244352.0,
+        "volume": 1044640.369047619,
+        "change": 15.48556854196336
+    },
+    {
+        "Symbol": "AXNX",
+        "company_name": "Axonics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 3521525760.0,
+        "volume": 695755.2658730159,
+        "change": 12.400062588668836
+    },
+    {
+        "Symbol": "KNBIF",
+        "company_name": "Kane Biotech Inc",
+        "Industry": "Healthcare",
+        "market_cap": 12270612.0,
+        "volume": 4008.6733067729083,
+        "change": 54.333341591060346
+    },
+    {
+        "Symbol": "CELC",
+        "company_name": "Celcuity Inc",
+        "Industry": "Healthcare",
+        "market_cap": 589891072.0,
+        "volume": 220054.42063492062,
+        "change": 70.37432786362886
+    },
+    {
+        "Symbol": "RMSL",
+        "company_name": "REMSleep Holdings Inc",
+        "Industry": "Healthcare",
+        "market_cap": 13278408.0,
+        "volume": 2624237.793650794,
+        "change": -52.94117647058824
+    },
+    {
+        "Symbol": "IMTX",
+        "company_name": "Immatics NV",
+        "Industry": "Healthcare",
+        "market_cap": 1230054656.0,
+        "volume": 466384.5198412698,
+        "change": -4.0996727685725975
+    },
+    {
+        "Symbol": "HQY",
+        "company_name": "HealthEquity Inc",
+        "Industry": "Healthcare",
+        "market_cap": 6522266624.0,
+        "volume": 663390.3849206349,
+        "change": 6.639065484146839
+    },
+    {
+        "Symbol": "CPRX",
+        "company_name": "Catalyst Pharmaceutical Inc",
+        "Industry": "Healthcare",
+        "market_cap": 2298986752.0,
+        "volume": 1253465.646825397,
+        "change": 51.56495496052811
+    },
+    {
+        "Symbol": "ATOS",
+        "company_name": "Atossa Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 183605232.0,
+        "volume": 955494.5555555555,
+        "change": 69.76744347227269
+    },
+    {
+        "Symbol": "KYMR",
+        "company_name": "Kymera Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 3027688704.0,
+        "volume": 691905.1388888889,
+        "change": 145.70231266022654
+    },
+    {
+        "Symbol": "BBRRF",
+        "company_name": "Blueberries Medical Corp",
+        "Industry": "Healthcare",
+        "market_cap": 5561556.0,
+        "volume": 66198.15476190476,
+        "change": -43.9353074695086
+    },
+    {
+        "Symbol": "CI",
+        "company_name": "The Cigna Group",
+        "Industry": "Healthcare",
+        "market_cap": 100106493952.0,
+        "volume": 1616393.119047619,
+        "change": 25.728529209635248
+    },
+    {
+        "Symbol": "KRYS",
+        "company_name": "Krystal Biotech Inc",
+        "Industry": "Healthcare",
+        "market_cap": 5315049984.0,
+        "volume": 342258.97222222225,
+        "change": 44.0361230796427
+    },
+    {
+        "Symbol": "CCCC",
+        "company_name": "C4 Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 452082464.0,
+        "volume": 4828702.21031746,
+        "change": 175.10549771138272
+    },
+    {
+        "Symbol": "GERN",
+        "company_name": "Geron Corp",
+        "Industry": "Healthcare",
+        "market_cap": 2616134912.0,
+        "volume": 9348174.0,
+        "change": 85.47009879393818
+    },
+    {
+        "Symbol": "SLDB",
+        "company_name": "Solid Biosciences Inc",
+        "Industry": "Healthcare",
+        "market_cap": 303358272.0,
+        "volume": 376594.5317460318,
+        "change": 137.46224378825954
+    },
+    {
+        "Symbol": "VCEL",
+        "company_name": "Vericel Corp",
+        "Industry": "Healthcare",
+        "market_cap": 2137716608.0,
+        "volume": 409769.8015873016,
+        "change": 28.009385543686736
+    },
+    {
+        "Symbol": "GNFT",
+        "company_name": "Genfit SA",
+        "Industry": "Healthcare",
+        "market_cap": 213388112.0,
+        "volume": 16958.31349206349,
+        "change": 8.564105191252654
+    },
+    {
+        "Symbol": "SYUP",
+        "company_name": "ANBC Inc",
+        "Industry": "Healthcare",
+        "market_cap": 398024.0,
+        "volume": 5242.175298804781,
+        "change": -61.24031226017542
+    },
+    {
+        "Symbol": "TLSA",
+        "company_name": "Tiziana Life Sciences Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 88834904.0,
+        "volume": 164479.0119047619,
+        "change": 15.14474047039359
+    },
+    {
+        "Symbol": "ACRHF",
+        "company_name": "Acreage Holdings Inc",
+        "Industry": "Healthcare",
+        "market_cap": 25185780.0,
+        "volume": 85745.09126984127,
+        "change": -63.26530537770124
+    },
+    {
+        "Symbol": "TRML",
+        "company_name": "Tourmaline Bio Inc",
+        "Industry": "Healthcare",
+        "market_cap": 452570688.0,
+        "volume": 241282.89285714287,
+        "change": -37.411350563770306
+    },
+    {
+        "Symbol": "CDXS",
+        "company_name": "Codexis Inc",
+        "Industry": "Healthcare",
+        "market_cap": 190794704.0,
+        "volume": 613744.8968253968,
+        "change": 52.84091317025593
+    },
+    {
+        "Symbol": "APRE",
+        "company_name": "Aprea Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 17816632.0,
+        "volume": 16171.65873015873,
+        "change": -19.509199388618676
+    },
+    {
+        "Symbol": "AQST",
+        "company_name": "Aquestive Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 419785696.0,
+        "volume": 1372916.126984127,
+        "change": 193.630571942614
+    },
+    {
+        "Symbol": "ENSG",
+        "company_name": "Ensign Group Inc (The)",
+        "Industry": "Healthcare",
+        "market_cap": 8661864448.0,
+        "volume": 292822.54365079367,
+        "change": 60.60574306044641
+    },
+    {
+        "Symbol": "WILYY",
+        "company_name": "Demant AS",
+        "Industry": "Healthcare",
+        "market_cap": 9378428928.0,
+        "volume": 449.800796812749,
+        "change": 1.4634109124904724
+    },
+    {
+        "Symbol": "CODX",
+        "company_name": "Co-Diagnostic Inc",
+        "Industry": "Healthcare",
+        "market_cap": 40526968.0,
+        "volume": 133972.01984126985,
+        "change": 4.958672800657641
+    },
+    {
+        "Symbol": "VRNOF",
+        "company_name": "Verano Holdings Corp",
+        "Industry": "Healthcare",
+        "market_cap": 1160496896.0,
+        "volume": 407205.04761904763,
+        "change": -36.432639150719545
+    },
+    {
+        "Symbol": "GLSI",
+        "company_name": "Greenwich Lifesciences Inc",
+        "Industry": "Healthcare",
+        "market_cap": 192964208.0,
+        "volume": 34340.63888888889,
+        "change": 54.20167646319879
+    },
+    {
+        "Symbol": "BIAF",
+        "company_name": "bioAffinity Technologies Inc",
+        "Industry": "Healthcare",
+        "market_cap": 18751516.0,
+        "volume": 100633.45238095238,
+        "change": -16.766465783542337
+    },
+    {
+        "Symbol": "SYK",
+        "company_name": "Stryker Corp",
+        "Industry": "Healthcare",
+        "market_cap": 139111432192.0,
+        "volume": 1374523.861111111,
+        "change": 21.797005974305648
+    },
+    {
+        "Symbol": "ESLOY",
+        "company_name": "EssilorLuxottica Societe anonyme",
+        "Industry": "Healthcare",
+        "market_cap": 105606873088.0,
+        "volume": 33910.71031746032,
+        "change": 23.4004080544248
+    },
+    {
+        "Symbol": "INDP",
+        "company_name": "Indaptus Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 14785505.0,
+        "volume": 33963.51190476191,
+        "change": -52.76872706143349
+    },
+    {
+        "Symbol": "KNSA",
+        "company_name": "Kiniksa Pharmaceuticals Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 1719110272.0,
+        "volume": 409399.5317460318,
+        "change": 38.43946493564477
+    },
+    {
+        "Symbol": "ALHC",
+        "company_name": "Alignment Healthcare Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1721699968.0,
+        "volume": 811508.8412698413,
+        "change": 70.13232636862632
+    },
+    {
+        "Symbol": "EQ",
+        "company_name": "Equillium Inc",
+        "Industry": "Healthcare",
+        "market_cap": 31258490.0,
+        "volume": 235872.0158730159,
+        "change": 10.29999538809068
+    },
+    {
+        "Symbol": "ANAB",
+        "company_name": "AnaptysBio Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1061220928.0,
+        "volume": 304834.45634920633,
+        "change": 78.46621857052313
+    },
+    {
+        "Symbol": "RDY",
+        "company_name": "Dr Reddy'S Laboratories Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 13141969920.0,
+        "volume": 234449.32936507938,
+        "change": 15.538958406614109
+    },
+    {
+        "Symbol": "DHR",
+        "company_name": "Danaher Corp",
+        "Industry": "Healthcare",
+        "market_cap": 198406356992.0,
+        "volume": 2884545.6865079366,
+        "change": 23.86942970959153
+    },
+    {
+        "Symbol": "AVTE",
+        "company_name": "Aerovate Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 54559952.0,
+        "volume": 386593.84126984124,
+        "change": -85.82145539000557
+    },
+    {
+        "Symbol": "UTHR",
+        "company_name": "United Therapeutics Corp",
+        "Industry": "Healthcare",
+        "market_cap": 15236456448.0,
+        "volume": 433036.09126984124,
+        "change": 51.98827459751661
+    },
+    {
+        "Symbol": "URGN",
+        "company_name": "UroGen Pharma Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 565171200.0,
+        "volume": 402125.5873015873,
+        "change": -19.544365523004593
+    },
+    {
+        "Symbol": "TLIS",
+        "company_name": "Talis Biomedical Corp",
+        "Industry": "Healthcare",
+        "market_cap": 3372217.0,
+        "volume": 15089.698412698413,
+        "change": -68.10344891372388
+    },
+    {
+        "Symbol": "FDMT",
+        "company_name": "4D Molecular Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 806048512.0,
+        "volume": 720389.1626984127,
+        "change": -2.3914418264981374
+    },
+    {
+        "Symbol": "ABBV",
+        "company_name": "AbbVie Inc",
+        "Industry": "Healthcare",
+        "market_cap": 352119881728.0,
+        "volume": 5312921.757936508,
+        "change": 33.75604876792747
+    },
+    {
+        "Symbol": "PAHC",
+        "company_name": "Phibro Animal Health Corp",
+        "Industry": "Healthcare",
+        "market_cap": 845715136.0,
+        "volume": 159476.5,
+        "change": 64.2800873178499
+    },
+    {
+        "Symbol": "PYXS",
+        "company_name": "Pyxis Oncology Inc",
+        "Industry": "Healthcare",
+        "market_cap": 224864496.0,
+        "volume": 488280.67063492065,
+        "change": 65.86957114405365
+    },
+    {
+        "Symbol": "HCA",
+        "company_name": "HCA Healthcare Inc",
+        "Industry": "Healthcare",
+        "market_cap": 99727532032.0,
+        "volume": 1203767.4404761905,
+        "change": 41.8195746825519
+    },
+    {
+        "Symbol": "IMMP",
+        "company_name": "Immutep Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 387884960.0,
+        "volume": 220842.59523809524,
+        "change": 30.96446123029552
+    },
+    {
+        "Symbol": "BIMI",
+        "company_name": "BIMI Holdings Inc",
+        "Industry": "Healthcare",
+        "market_cap": 279216.0,
+        "volume": 139265.33864541832,
+        "change": -98.74213841930136
+    },
+    {
+        "Symbol": "JUSHF",
+        "company_name": "Jushi Holdings Inc",
+        "Industry": "Healthcare",
+        "market_cap": 105970920.0,
+        "volume": 314470.4761904762,
+        "change": -30.103761555453882
+    },
+    {
+        "Symbol": "CERE",
+        "company_name": "Cerevel Therapeutics Holdings Inc",
+        "Industry": "Healthcare",
+        "market_cap": 8191487488.0,
+        "volume": 1854526.36,
+        "change": 87.02161968485271
+    },
+    {
+        "Symbol": "PGEN",
+        "company_name": "Precigen Inc",
+        "Industry": "Healthcare",
+        "market_cap": 286437984.0,
+        "volume": 1097630.873015873,
+        "change": -38.440252942613775
+    },
+    {
+        "Symbol": "SONVY",
+        "company_name": "Sonova Holding AG",
+        "Industry": "Healthcare",
+        "market_cap": 21419644928.0,
+        "volume": 22589.68253968254,
+        "change": 44.01394374330199
+    },
+    {
+        "Symbol": "ELEV",
+        "company_name": "Elevation Oncology Inc",
+        "Industry": "Healthcare",
+        "market_cap": 36043324.0,
+        "volume": 1298293.853174603,
+        "change": -10.978105256233405
+    },
+    {
+        "Symbol": "IVVD",
+        "company_name": "Invivyd Inc",
+        "Industry": "Healthcare",
+        "market_cap": 107522592.0,
+        "volume": 820929.2658730159,
+        "change": -50.8087438122726
+    },
+    {
+        "Symbol": "CNTX",
+        "company_name": "Context Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 159746400.0,
+        "volume": 225183.1626984127,
+        "change": 97.2222249816964
+    },
+    {
+        "Symbol": "ABUS",
+        "company_name": "Arbutus Biopharma Corp",
+        "Industry": "Healthcare",
+        "market_cap": 860845888.0,
+        "volume": 983275.4920634921,
+        "change": 107.27272017928209
+    },
+    {
+        "Symbol": "ADUS",
+        "company_name": "Addus HomeCare Corp",
+        "Industry": "Healthcare",
+        "market_cap": 2299281152.0,
+        "volume": 116150.93650793651,
+        "change": 51.24419813099359
+    },
+    {
+        "Symbol": "FSNUY",
+        "company_name": "Fresenius SE & Co KGAA",
+        "Industry": "Healthcare",
+        "market_cap": 21065082880.0,
+        "volume": 45899.203187251,
+        "change": 21.11399787016848
+    },
+    {
+        "Symbol": "SIGA",
+        "company_name": "SIGA Technologies Inc",
+        "Industry": "Healthcare",
+        "market_cap": 538838208.0,
+        "volume": 811915.4166666666,
+        "change": 73.56322658063574
+    },
+    {
+        "Symbol": "MDXG",
+        "company_name": "MiMedx Group Inc",
+        "Industry": "Healthcare",
+        "market_cap": 914620032.0,
+        "volume": 725023.7936507936,
+        "change": -23.651959122900106
+    },
+    {
+        "Symbol": "BSPK",
+        "company_name": "Bespoke Extracts Inc",
+        "Industry": "Healthcare",
+        "market_cap": 966017.0,
+        "volume": 6866.286852589641,
+        "change": -29.629633308928543
+    },
+    {
+        "Symbol": "ITRM",
+        "company_name": "Iterum Therapeutics plc",
+        "Industry": "Healthcare",
+        "market_cap": 21570700.0,
+        "volume": 289437.75396825396,
+        "change": 22.89779893078675
+    },
+    {
+        "Symbol": "AHI",
+        "company_name": "Advanced Health Intelligence Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 13100460.0,
+        "volume": 17636.115537848607,
+        "change": -55.22387932233325
+    },
+    {
+        "Symbol": "ACLX",
+        "company_name": "Arcellx Inc",
+        "Industry": "Healthcare",
+        "market_cap": 3988135424.0,
+        "volume": 526989.0436507936,
+        "change": 107.87336871984463
+    },
+    {
+        "Symbol": "CYBN",
+        "company_name": "Cybin Inc",
+        "Industry": "Healthcare",
+        "market_cap": 160609264.0,
+        "volume": 4937747.361111111,
+        "change": -36.363640879139574
+    },
+    {
+        "Symbol": "OLK",
+        "company_name": "Olink Holding AB (publ)",
+        "Industry": "Healthcare",
+        "market_cap": 3242865408.0,
+        "volume": 934861.6971153846,
+        "change": 66.64537098663065
+    },
+    {
+        "Symbol": "ASTH",
+        "company_name": "Astrana Health Inc",
+        "Industry": "Healthcare",
+        "market_cap": 2187007488.0,
+        "volume": 182101.51984126985,
+        "change": 44.36746748114281
+    },
+    {
+        "Symbol": "INVA",
+        "company_name": "Innoviva Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1218717440.0,
+        "volume": 647113.2023809524,
+        "change": 55.83999633789063
+    },
+    {
+        "Symbol": "MRK",
+        "company_name": "Merck & Co Inc",
+        "Industry": "Healthcare",
+        "market_cap": 292339646464.0,
+        "volume": 8345133.174603174,
+        "change": 6.197056585168668
+    },
+    {
+        "Symbol": "MRNA",
+        "company_name": "Moderna Inc",
+        "Industry": "Healthcare",
+        "market_cap": 30474913792.0,
+        "volume": 4253957.416666667,
+        "change": -25.066165886108
+    },
+    {
+        "Symbol": "OTLC",
+        "company_name": "Oncotelic Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 9669227.0,
+        "volume": 104464.36507936507,
+        "change": -20.666663065552633
+    },
+    {
+        "Symbol": "PTGX",
+        "company_name": "Protagonist Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 2645994496.0,
+        "volume": 748926.753968254,
+        "change": 138.17601651767907
+    },
+    {
+        "Symbol": "GRYN",
+        "company_name": "Green Hygienics Holdings Inc",
+        "Industry": "Healthcare",
+        "market_cap": 26689.0,
+        "volume": 1046.1195219123506,
+        "change": 20.0
+    },
+    {
+        "Symbol": "GSK",
+        "company_name": "GSK plc",
+        "Industry": "Healthcare",
+        "market_cap": 89941065728.0,
+        "volume": 3512249.226190476,
+        "change": 19.124791812023425
+    },
+    {
+        "Symbol": "LMAT",
+        "company_name": "LeMaitre Vascular Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1939956096.0,
+        "volume": 128444.97619047618,
+        "change": 51.155458600149
+    },
+    {
+        "Symbol": "EVGN",
+        "company_name": "Evogene Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 15707768.0,
+        "volume": 16408.214285714286,
+        "change": -60.68493410175966
+    },
+    {
+        "Symbol": "ELMD",
+        "company_name": "Electromed Inc",
+        "Industry": "Healthcare",
+        "market_cap": 145997744.0,
+        "volume": 24105.119047619046,
+        "change": 53.91621423590881
+    },
+    {
+        "Symbol": "PASG",
+        "company_name": "Passage Bio Inc",
+        "Industry": "Healthcare",
+        "market_cap": 47684356.0,
+        "volume": 342189.6746031746,
+        "change": 1.57895058806257
+    },
+    {
+        "Symbol": "INCR",
+        "company_name": "Intercure Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 91601128.0,
+        "volume": 55052.718253968254,
+        "change": 18.23529024025159
+    },
+    {
+        "Symbol": "IMVT",
+        "company_name": "Immunovant Inc",
+        "Industry": "Healthcare",
+        "market_cap": 4350027264.0,
+        "volume": 1478107.4682539683,
+        "change": 31.796010283273844
+    },
+    {
+        "Symbol": "CAH",
+        "company_name": "Cardinal Health Inc",
+        "Industry": "Healthcare",
+        "market_cap": 27888551936.0,
+        "volume": 2112188.507936508,
+        "change": 27.460156545000803
+    },
+    {
+        "Symbol": "KALV",
+        "company_name": "KalVista Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 484445760.0,
+        "volume": 444835.48412698414,
+        "change": 6.356736989742391
+    },
+    {
+        "Symbol": "AVTR",
+        "company_name": "Avantor Inc",
+        "Industry": "Healthcare",
+        "market_cap": 17995364352.0,
+        "volume": 6991498.829365079,
+        "change": 29.69132538582925
+    },
+    {
+        "Symbol": "AMS",
+        "company_name": "American Shared Hospital Services",
+        "Industry": "Healthcare",
+        "market_cap": 19525200.0,
+        "volume": 38371.37698412698,
+        "change": 17.624523242752236
+    },
+    {
+        "Symbol": "THCT",
+        "company_name": "THC Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 120678.0,
+        "volume": 696.2270916334661,
+        "change": -6.249996816768463
+    },
+    {
+        "Symbol": "BTMD",
+        "company_name": "biote Corp",
+        "Industry": "Healthcare",
+        "market_cap": 304732896.0,
+        "volume": 144274.98015873015,
+        "change": 17.922609812396136
+    },
+    {
+        "Symbol": "ALC",
+        "company_name": "Alcon Inc",
+        "Industry": "Healthcare",
+        "market_cap": 48739835904.0,
+        "volume": 843905.8333333334,
+        "change": 17.890182373046855
+    },
+    {
+        "Symbol": "WAT",
+        "company_name": "Waters Corp",
+        "Industry": "Healthcare",
+        "market_cap": 19480201216.0,
+        "volume": 456445.5396825397,
+        "change": 24.633505080197605
+    },
+    {
+        "Symbol": "XBIO",
+        "company_name": "Xenetic Biosciences Inc",
+        "Industry": "Healthcare",
+        "market_cap": 5582546.0,
+        "volume": 7391.702380952381,
+        "change": -21.814259263874675
+    },
+    {
+        "Symbol": "AZTA",
+        "company_name": "Azenta Inc",
+        "Industry": "Healthcare",
+        "market_cap": 2242291200.0,
+        "volume": 533794.9126984127,
+        "change": -11.9308341508121
+    },
+    {
+        "Symbol": "ELV",
+        "company_name": "Elevance Health Inc",
+        "Industry": "Healthcare",
+        "market_cap": 126180769792.0,
+        "volume": 1038743.2222222222,
+        "change": 21.121402436406655
+    },
+    {
+        "Symbol": "XBIT",
+        "company_name": "XBiotech Inc",
+        "Industry": "Healthcare",
+        "market_cap": 202580288.0,
+        "volume": 65011.59126984127,
+        "change": 42.09402434376048
+    },
+    {
+        "Symbol": "CCLD",
+        "company_name": "CareCloud Inc",
+        "Industry": "Healthcare",
+        "market_cap": 40371864.0,
+        "volume": 508205.39285714284,
+        "change": 87.21803978883284
+    },
+    {
+        "Symbol": "SOPH",
+        "company_name": "SOPHiA GENETICS SA",
+        "Industry": "Healthcare",
+        "market_cap": 243647280.0,
+        "volume": 63072.05158730159,
+        "change": 50.20408143405366
+    },
+    {
+        "Symbol": "GMED",
+        "company_name": "Globus Medical Inc",
+        "Industry": "Healthcare",
+        "market_cap": 9394537472.0,
+        "volume": 1144717.3373015872,
+        "change": 35.90597118569685
+    },
+    {
+        "Symbol": "SMLR",
+        "company_name": "Semler Scientific Inc",
+        "Industry": "Healthcare",
+        "market_cap": 164248896.0,
+        "volume": 150903.64682539683,
+        "change": -13.096562432853814
+    },
+    {
+        "Symbol": "NBTX",
+        "company_name": "Nanobiotix SA",
+        "Industry": "Healthcare",
+        "market_cap": 239393744.0,
+        "volume": 16814.39285714286,
+        "change": -49.44944638202304
+    },
+    {
+        "Symbol": "ICAD",
+        "company_name": "iCAD Inc",
+        "Industry": "Healthcare",
+        "market_cap": 36632336.0,
+        "volume": 169019.8650793651,
+        "change": -36.23853471882959
+    },
+    {
+        "Symbol": "SEM",
+        "company_name": "Select Medical Holdings Corp",
+        "Industry": "Healthcare",
+        "market_cap": 4372606464.0,
+        "volume": 605606.0912698413,
+        "change": 27.0975141032794
+    },
+    {
+        "Symbol": "SRZN",
+        "company_name": "Surrozen Inc",
+        "Industry": "Healthcare",
+        "market_cap": 26704730.0,
+        "volume": 11494.992063492064,
+        "change": 6.589889478116835
+    },
+    {
+        "Symbol": "HSTM",
+        "company_name": "HealthStream Inc",
+        "Industry": "Healthcare",
+        "market_cap": 859028800.0,
+        "volume": 114444.51984126984,
+        "change": 35.55662088846935
+    },
+    {
+        "Symbol": "CVALF",
+        "company_name": "Covalon Technologies Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 55017668.0,
+        "volume": 2801.190476190476,
+        "change": 102.72727006723079
+    },
+    {
+        "Symbol": "A",
+        "company_name": "Agilent Technologies Inc",
+        "Industry": "Healthcare",
+        "market_cap": 39659884544.0,
+        "volume": 1836222.126984127,
+        "change": 22.042440885514356
+    },
+    {
+        "Symbol": "CRVL",
+        "company_name": "CorVel Corp.",
+        "Industry": "Healthcare",
+        "market_cap": 5153750016.0,
+        "volume": 35930.107142857145,
+        "change": 49.174393350203474
+    },
+    {
+        "Symbol": "STOK",
+        "company_name": "Stoke Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 838152960.0,
+        "volume": 623724.0714285715,
+        "change": 200.9451831965108
+    },
+    {
+        "Symbol": "EXEL",
+        "company_name": "Exelixis Inc",
+        "Industry": "Healthcare",
+        "market_cap": 7504979968.0,
+        "volume": 2103213.376984127,
+        "change": 19.64529213182685
+    },
+    {
+        "Symbol": "LIVN",
+        "company_name": "LivaNova PLC",
+        "Industry": "Healthcare",
+        "market_cap": 2551463168.0,
+        "volume": 616984.4682539683,
+        "change": -13.890412422113977
+    },
+    {
+        "Symbol": "NGENF",
+        "company_name": "NervGen Pharma Corp",
+        "Industry": "Healthcare",
+        "market_cap": 133342376.0,
+        "volume": 61641.52777777778,
+        "change": 26.666665077209473
+    },
+    {
+        "Symbol": "PSTX",
+        "company_name": "Poseida Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 287516352.0,
+        "volume": 637002.4087301587,
+        "change": 32.735426584291446
+    },
+    {
+        "Symbol": "NVS",
+        "company_name": "Novartis AG",
+        "Industry": "Healthcare",
+        "market_cap": 238555480064.0,
+        "volume": 1439826.376984127,
+        "change": 17.885933476506207
+    },
+    {
+        "Symbol": "IMRN",
+        "company_name": "Immuron Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 15076394.0,
+        "volume": 229599.6507936508,
+        "change": 35.6410213460428
+    },
+    {
+        "Symbol": "PBH",
+        "company_name": "Prestige Consumer Healthcare Inc",
+        "Industry": "Healthcare",
+        "market_cap": 3573584128.0,
+        "volume": 241307.57142857142,
+        "change": 25.430507053473907
+    },
+    {
+        "Symbol": "SANA",
+        "company_name": "Sana Biotechnology Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1112329984.0,
+        "volume": 2059766.8174603174,
+        "change": -10.233395944247551
+    },
+    {
+        "Symbol": "IPSEY",
+        "company_name": "Ipsen SA",
+        "Industry": "Healthcare",
+        "market_cap": 10017684480.0,
+        "volume": 1000.796812749004,
+        "change": -7.1308047484528565
+    },
+    {
+        "Symbol": "LENZ",
+        "company_name": "LENZ Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 657622208.0,
+        "volume": 189901.62301587302,
+        "change": 998.1651284840964
+    },
+    {
+        "Symbol": "ARCT",
+        "company_name": "Arcturus Therapeutics Holdings Inc",
+        "Industry": "Healthcare",
+        "market_cap": 534353888.0,
+        "volume": 468063.24206349207,
+        "change": -37.32952807308006
+    },
+    {
+        "Symbol": "CAPR",
+        "company_name": "Capricor Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 139266496.0,
+        "volume": 319504.09523809527,
+        "change": -34.05238273111762
+    },
+    {
+        "Symbol": "TMO",
+        "company_name": "Thermo Fisher Scientific Inc",
+        "Industry": "Healthcare",
+        "market_cap": 238445723648.0,
+        "volume": 1600425.753968254,
+        "change": 21.219951647412277
+    },
+    {
+        "Symbol": "VANI",
+        "company_name": "Vivani Medical Inc",
+        "Industry": "Healthcare",
+        "market_cap": 71280112.0,
+        "volume": 896265.3571428572,
+        "change": 35.78947137267303
+    },
+    {
+        "Symbol": "ARVN",
+        "company_name": "Arvinas Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1751212928.0,
+        "volume": 740290.7380952381,
+        "change": -8.435033488824004
+    },
+    {
+        "Symbol": "MNKD",
+        "company_name": "MannKind Corp",
+        "Industry": "Healthcare",
+        "market_cap": 1655469952.0,
+        "volume": 2672762.51984127,
+        "change": 38.39080719324763
+    },
+    {
+        "Symbol": "ALIM",
+        "company_name": "Alimera Sciences Inc",
+        "Industry": "Healthcare",
+        "market_cap": 282254016.0,
+        "volume": 263635.2301587302,
+        "change": 51.31195207605928
+    },
+    {
+        "Symbol": "IDXX",
+        "company_name": "IDEXX Laboratories Inc",
+        "Industry": "Healthcare",
+        "market_cap": 40819613696.0,
+        "volume": 486656.7103174603,
+        "change": 5.183347529261303
+    },
+    {
+        "Symbol": "MEDIF",
+        "company_name": "MediPharm Labs Corp",
+        "Industry": "Healthcare",
+        "market_cap": 18909220.0,
+        "volume": 96490.92857142857,
+        "change": -34.28571443776695
+    },
+    {
+        "Symbol": "SNWV",
+        "company_name": "SANUWAVE Health Inc",
+        "Industry": "Healthcare",
+        "market_cap": 17955304.0,
+        "volume": 449763.5595238095,
+        "change": -21.243525016240238
+    },
+    {
+        "Symbol": "IRIX",
+        "company_name": "IRIDEX Corp",
+        "Industry": "Healthcare",
+        "market_cap": 32193330.0,
+        "volume": 57037.956349206346,
+        "change": 4.278077150339552
+    },
+    {
+        "Symbol": "CLOV",
+        "company_name": "Clover Health Investments Corp",
+        "Industry": "Healthcare",
+        "market_cap": 1263571200.0,
+        "volume": 7307418.94047619,
+        "change": 88.14814199963071
+    },
+    {
+        "Symbol": "JYNT",
+        "company_name": "Joint Corp (The)",
+        "Industry": "Healthcare",
+        "market_cap": 171863328.0,
+        "volume": 92235.45634920635,
+        "change": 19.7492205182089
+    },
+    {
+        "Symbol": "ALXO",
+        "company_name": "ALX Oncology Holdings Inc",
+        "Industry": "Healthcare",
+        "market_cap": 113771096.0,
+        "volume": 937472.373015873,
+        "change": -56.45161150769563
+    },
+    {
+        "Symbol": "TRUMY",
+        "company_name": "Terumo Corp",
+        "Industry": "Healthcare",
+        "market_cap": 27048593408.0,
+        "volume": 79046.30158730158,
+        "change": 24.213406221361637
+    },
+    {
+        "Symbol": "AZN",
+        "company_name": "Astrazeneca PLC",
+        "Industry": "Healthcare",
+        "market_cap": 259260760064.0,
+        "volume": 5343861.583333333,
+        "change": 21.861870152513433
+    },
+    {
+        "Symbol": "STE",
+        "company_name": "Steris Plc",
+        "Industry": "Healthcare",
+        "market_cap": 24375091200.0,
+        "volume": 462059.61904761905,
+        "change": 8.038289836424553
+    },
+    {
+        "Symbol": "MOH",
+        "company_name": "Molina Healthcare Inc.",
+        "Industry": "Healthcare",
+        "market_cap": 19478640640.0,
+        "volume": 457796.96428571426,
+        "change": 3.245839817745751
+    },
+    {
+        "Symbol": "XTNT",
+        "company_name": "Xtant Medical Holdings Inc",
+        "Industry": "Healthcare",
+        "market_cap": 79411472.0,
+        "volume": 101513.47222222222,
+        "change": -55.27343724534147
+    },
+    {
+        "Symbol": "DSNKY",
+        "company_name": "Daiichi Sankyo Company Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 75676672000.0,
+        "volume": 120698.5992063492,
+        "change": 31.880978200281746
+    },
+    {
+        "Symbol": "LGND",
+        "company_name": "Ligand Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1867639936.0,
+        "volume": 133675.97619047618,
+        "change": 60.663211756821234
+    },
+    {
+        "Symbol": "SNPHY",
+        "company_name": "Santen Pharmaceutical Co Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 4500814336.0,
+        "volume": 5239.442231075697,
+        "change": 32.668062049734516
+    },
+    {
+        "Symbol": "MXCT",
+        "company_name": "MaxCyte Inc",
+        "Industry": "Healthcare",
+        "market_cap": 428083936.0,
+        "volume": 681517.6150793651,
+        "change": 3.6649242761983167
+    },
+    {
+        "Symbol": "TRDA",
+        "company_name": "Entrada Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 547578112.0,
+        "volume": 88528.85317460318,
+        "change": 0.1360575375726601
+    },
+    {
+        "Symbol": "MTD",
+        "company_name": "Mettler-Toledo International Inc",
+        "Industry": "Healthcare",
+        "market_cap": 29581473792.0,
+        "volume": 148342.63095238095,
+        "change": 23.481162621371297
+    },
+    {
+        "Symbol": "ZTS",
+        "company_name": "Zoetis Inc",
+        "Industry": "Healthcare",
+        "market_cap": 86695837696.0,
+        "volume": 2408083.75,
+        "change": 2.843012349064529
+    },
+    {
+        "Symbol": "CRLBF",
+        "company_name": "Cresco Labs Inc",
+        "Industry": "Healthcare",
+        "market_cap": 585515264.0,
+        "volume": 790020.0555555555,
+        "change": -37.31343635447326
+    },
+    {
+        "Symbol": "VTRS",
+        "company_name": "Viatris Inc",
+        "Industry": "Healthcare",
+        "market_cap": 13331618816.0,
+        "volume": 8886214.908730159,
+        "change": 11.588409799084358
+    },
+    {
+        "Symbol": "OLYMY",
+        "company_name": "Olympus Corp",
+        "Industry": "Healthcare",
+        "market_cap": 20501782528.0,
+        "volume": 73606.24603174604,
+        "change": 34.469698912731786
+    },
+    {
+        "Symbol": "LFWD",
+        "company_name": "ReWalk Robotics Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 27751468.0,
+        "volume": 39771.3253968254,
+        "change": -41.92067482175519
+    },
+    {
+        "Symbol": "COO",
+        "company_name": "Cooper Cos Inc (The)",
+        "Industry": "Healthcare",
+        "market_cap": 21576560640.0,
+        "volume": 1145620.103174603,
+        "change": 23.25720010960948
+    },
+    {
+        "Symbol": "BUDZ",
+        "company_name": "WEED Inc",
+        "Industry": "Healthcare",
+        "market_cap": 6186498.0,
+        "volume": 48978.65079365079,
+        "change": -49.90000203400847
+    },
+    {
+        "Symbol": "ITOS",
+        "company_name": "iTeos Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 583983552.0,
+        "volume": 373964.8531746032,
+        "change": 25.608800833539853
+    },
+    {
+        "Symbol": "ROIV",
+        "company_name": "Roivant Sciences Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 9014772736.0,
+        "volume": 5977159.615079365,
+        "change": 5.907900416849295
+    },
+    {
+        "Symbol": "OTSKY",
+        "company_name": "Otsuka Holdings Co Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 30993170432.0,
+        "volume": 42338.32142857143,
+        "change": 57.25274527192398
+    },
+    {
+        "Symbol": "ASMB",
+        "company_name": "Assembly Biosciences Inc",
+        "Industry": "Healthcare",
+        "market_cap": 106288128.0,
+        "volume": 56924.36111111111,
+        "change": 48.49291131665649
+    },
+    {
+        "Symbol": "PRTC",
+        "company_name": "PureTech Health PLC",
+        "Industry": "Healthcare",
+        "market_cap": 474053568.0,
+        "volume": 2630.527777777778,
+        "change": -21.42857683488825
+    },
+    {
+        "Symbol": "NYXH",
+        "company_name": "Nyxoah S A",
+        "Industry": "Healthcare",
+        "market_cap": 275652672.0,
+        "volume": 30621.0,
+        "change": -6.333739080516248
+    },
+    {
+        "Symbol": "ABEO",
+        "company_name": "Abeona Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 240828064.0,
+        "volume": 380562.96428571426,
+        "change": 26.651483186275954
+    },
+    {
+        "Symbol": "VASO",
+        "company_name": "Vaso Corp",
+        "Industry": "Healthcare",
+        "market_cap": 44722152.0,
+        "volume": 148543.39682539683,
+        "change": -12.068964631322139
+    },
+    {
+        "Symbol": "CHGCY",
+        "company_name": "Chugai Pharmaceutical Co Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 75930763264.0,
+        "volume": 101280.22619047618,
+        "change": 50.19634269638061
+    },
+    {
+        "Symbol": "RGRX",
+        "company_name": "RegeneRx Biopharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 93111.0,
+        "volume": 283.6573705179283,
+        "change": -96.11250014249235
+    },
+    {
+        "Symbol": "RVP",
+        "company_name": "Retractable Technologies Inc",
+        "Industry": "Healthcare",
+        "market_cap": 26988386.0,
+        "volume": 83094.14285714286,
+        "change": -26.106560204305175
+    },
+    {
+        "Symbol": "PRQR",
+        "company_name": "ProQR Therapeutics NV",
+        "Industry": "Healthcare",
+        "market_cap": 150291568.0,
+        "volume": 195431.91666666666,
+        "change": 15.000000372529025
+    },
+    {
+        "Symbol": "INMB",
+        "company_name": "INmune Bio Inc",
+        "Industry": "Healthcare",
+        "market_cap": 118694400.0,
+        "volume": 108300.46825396825,
+        "change": -24.717689360745627
+    },
+    {
+        "Symbol": "FORA",
+        "company_name": "Forian Inc",
+        "Industry": "Healthcare",
+        "market_cap": 70932848.0,
+        "volume": 15315.944444444445,
+        "change": -1.2987000923330156
+    },
+    {
+        "Symbol": "ACB",
+        "company_name": "Aurora Cannabis Inc",
+        "Industry": "Healthcare",
+        "market_cap": 310260704.0,
+        "volume": 3083457.9206349207,
+        "change": -37.76069934165064
+    },
+    {
+        "Symbol": "ZYXI",
+        "company_name": "Zynex Inc",
+        "Industry": "Healthcare",
+        "market_cap": 254574864.0,
+        "volume": 251688.2380952381,
+        "change": 0.25000572204589844
+    },
+    {
+        "Symbol": "ABT",
+        "company_name": "Abbott Laboratories",
+        "Industry": "Healthcare",
+        "market_cap": 203759697920.0,
+        "volume": 5810655.563492063,
+        "change": 14.309423229671367
+    },
+    {
+        "Symbol": "SMMNY",
+        "company_name": "Siemens Healthineers AG",
+        "Industry": "Healthcare",
+        "market_cap": 62514798592.0,
+        "volume": 54752.24603174603,
+        "change": 12.94697751092492
+    },
+    {
+        "Symbol": "LTRN",
+        "company_name": "Lantern Pharma Inc",
+        "Industry": "Healthcare",
+        "market_cap": 36061744.0,
+        "volume": 120900.03174603175,
+        "change": -23.69020486293538
+    },
+    {
+        "Symbol": "GTHX",
+        "company_name": "G1 Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 376165984.0,
+        "volume": 1493970.2063492064,
+        "change": 321.8934836113331
+    },
+    {
+        "Symbol": "EW",
+        "company_name": "Edwards Lifesciences Corp",
+        "Industry": "Healthcare",
+        "market_cap": 40445136896.0,
+        "volume": 4296117.507936508,
+        "change": -10.324566680059972
+    },
+    {
+        "Symbol": "CRL",
+        "company_name": "Charles River Laboratories International Inc",
+        "Industry": "Healthcare",
+        "market_cap": 9810866176.0,
+        "volume": 568275.253968254,
+        "change": -4.828207559267853
+    },
+    {
+        "Symbol": "DGX",
+        "company_name": "Quest Diagnostics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 17015916544.0,
+        "volume": 938216.2698412698,
+        "change": 20.63767793767066
+    },
+    {
+        "Symbol": "PEPG",
+        "company_name": "PepGen Inc",
+        "Industry": "Healthcare",
+        "market_cap": 283530368.0,
+        "volume": 109157.26984126984,
+        "change": 41.6938110496219
+    },
+    {
+        "Symbol": "IQV",
+        "company_name": "IQVIA Holdings Inc",
+        "Industry": "Healthcare",
+        "market_cap": 42876960768.0,
+        "volume": 1133998.492063492,
+        "change": 9.227694677111115
+    },
+    {
+        "Symbol": "ITCI",
+        "company_name": "Intra-Cellular Therapies Inc",
+        "Industry": "Healthcare",
+        "market_cap": 7772864512.0,
+        "volume": 925530.5833333334,
+        "change": 25.3578683981457
+    },
+    {
+        "Symbol": "CRVW",
+        "company_name": "CareView Communications Inc",
+        "Industry": "Healthcare",
+        "market_cap": 29194052.0,
+        "volume": 22621.51394422311,
+        "change": -37.499997671693514
+    },
+    {
+        "Symbol": "OCS",
+        "company_name": "Oculis Holding AG",
+        "Industry": "Healthcare",
+        "market_cap": 501361056.0,
+        "volume": 27499.849206349205,
+        "change": -7.258684125313838
+    },
+    {
+        "Symbol": "SLGWF",
+        "company_name": "SLANG Worldwide Inc",
+        "Industry": "Healthcare",
+        "market_cap": 2533940.0,
+        "volume": 63843.701195219124,
+        "change": -77.14285726449927
+    },
+    {
+        "Symbol": "SNANF",
+        "company_name": "Sona Nanotech Inc",
+        "Industry": "Healthcare",
+        "market_cap": 19829080.0,
+        "volume": 6958.964143426295,
+        "change": 37.931040507009456
+    },
+    {
+        "Symbol": "QTTB",
+        "company_name": "Q32 Bio Inc",
+        "Industry": "Healthcare",
+        "market_cap": 578387968.0,
+        "volume": 46573.25,
+        "change": 127.73029582470868
+    },
+    {
+        "Symbol": "PDEX",
+        "company_name": "Pro Dex Inc",
+        "Industry": "Healthcare",
+        "market_cap": 90801944.0,
+        "volume": 7045.757936507936,
+        "change": 63.77953083383251
+    },
+    {
+        "Symbol": "AHCO",
+        "company_name": "AdaptHealth Corp",
+        "Industry": "Healthcare",
+        "market_cap": 1463033600.0,
+        "volume": 1165556.6984126985,
+        "change": 1.777367086209039
+    },
+    {
+        "Symbol": "RLMD",
+        "company_name": "Relmada Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 84789504.0,
+        "volume": 184501.9880952381,
+        "change": -17.836260815977113
+    },
+    {
+        "Symbol": "LH",
+        "company_name": "Labcorp Holdings Inc",
+        "Industry": "Healthcare",
+        "market_cap": 18499633152.0,
+        "volume": 724025.6031746032,
+        "change": 9.11207340299194
+    },
+    {
+        "Symbol": "AVDL",
+        "company_name": "Avadel Pharmaceuticals plc",
+        "Industry": "Healthcare",
+        "market_cap": 1385332480.0,
+        "volume": 1031694.4206349206,
+        "change": 11.636927541099922
+    },
+    {
+        "Symbol": "HOWL",
+        "company_name": "Werewolf Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 97455680.0,
+        "volume": 412305.1984126984,
+        "change": -11.507935081269514
+    },
+    {
+        "Symbol": "CRMD",
+        "company_name": "CorMedix Inc",
+        "Industry": "Healthcare",
+        "market_cap": 348007808.0,
+        "volume": 645063.5992063492,
+        "change": 59.74358632641361
+    },
+    {
+        "Symbol": "CNC",
+        "company_name": "Centene Corp",
+        "Industry": "Healthcare",
+        "market_cap": 37348130816.0,
+        "volume": 3403355.527777778,
+        "change": 6.895516346454928
+    },
+    {
+        "Symbol": "IMMX",
+        "company_name": "Immix Biopharma Inc",
+        "Industry": "Healthcare",
+        "market_cap": 52155948.0,
+        "volume": 224721.32936507938,
+        "change": -33.0985903668985
+    },
+    {
+        "Symbol": "DVAX",
+        "company_name": "Dynavax Technologies Corp",
+        "Industry": "Healthcare",
+        "market_cap": 1466382336.0,
+        "volume": 1947649.123015873,
+        "change": -16.988130857704146
+    },
+    {
+        "Symbol": "OABI",
+        "company_name": "OmniAb Inc",
+        "Industry": "Healthcare",
+        "market_cap": 506919264.0,
+        "volume": 529582.9007936508,
+        "change": -19.05660740630645
+    },
+    {
+        "Symbol": "TLRY",
+        "company_name": "Tilray Brands Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1433035392.0,
+        "volume": 23619878.817460317,
+        "change": -48.640481055230566
+    },
+    {
+        "Symbol": "LVTX",
+        "company_name": "LAVA Therapeutics N.V.",
+        "Industry": "Healthcare",
+        "market_cap": 44705412.0,
+        "volume": 494345.85714285716,
+        "change": 0.0
+    },
+    {
+        "Symbol": "MKKGY",
+        "company_name": "Merck KGaA",
+        "Industry": "Healthcare",
+        "market_cap": 82004385792.0,
+        "volume": 76602.71428571429,
+        "change": 5.6413086199200855
+    },
+    {
+        "Symbol": "ZYME",
+        "company_name": "Zymeworks Inc",
+        "Industry": "Healthcare",
+        "market_cap": 854344960.0,
+        "volume": 557808.380952381,
+        "change": 71.78570883614677
+    },
+    {
+        "Symbol": "UNH",
+        "company_name": "UnitedHealth Group Incorporated",
+        "Industry": "Healthcare",
+        "market_cap": 553155100672.0,
+        "volume": 3699421.5,
+        "change": 24.959327296788633
+    },
+    {
+        "Symbol": "LAB",
+        "company_name": "Standard BioTools Inc",
+        "Industry": "Healthcare",
+        "market_cap": 742307968.0,
+        "volume": 2051329.7976190476,
+        "change": -29.824559055280154
+    },
+    {
+        "Symbol": "NRBO",
+        "company_name": "NeuroBo Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 32928784.0,
+        "volume": 359697.1904761905,
+        "change": 6.828197881120504
+    },
+    {
+        "Symbol": "MDT",
+        "company_name": "Medtronic PLC",
+        "Industry": "Healthcare",
+        "market_cap": 116703764480.0,
+        "volume": 6408556.115079365,
+        "change": 11.781322061574837
+    },
+    {
+        "Symbol": "OGN",
+        "company_name": "Organon & Co",
+        "Industry": "Healthcare",
+        "market_cap": 5172632576.0,
+        "volume": 3065472.087301587,
+        "change": 2.135231696313639
+    },
+    {
+        "Symbol": "KROS",
+        "company_name": "Keros Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 2052083584.0,
+        "volume": 350554.3849206349,
+        "change": 49.79457995333134
+    },
+    {
+        "Symbol": "ACHC",
+        "company_name": "Acadia Healthcare Co Inc",
+        "Industry": "Healthcare",
+        "market_cap": 7088553472.0,
+        "volume": 710291.2182539683,
+        "change": 5.09432013982707
+    },
+    {
+        "Symbol": "IRON",
+        "company_name": "Disc Medicine Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1472616192.0,
+        "volume": 321403.57936507935,
+        "change": -11.42499437651014
+    },
+    {
+        "Symbol": "CHE",
+        "company_name": "Chemed Corp",
+        "Industry": "Healthcare",
+        "market_cap": 8593148928.0,
+        "volume": 82227.30952380953,
+        "change": 14.048599153461685
+    },
+    {
+        "Symbol": "CLDX",
+        "company_name": "Celldex Therapeutics Inc",
+        "Industry": "Healthcare",
+        "market_cap": 2786730752.0,
+        "volume": 754690.4325396825,
+        "change": 52.7061382745278
+    },
+    {
+        "Symbol": "CVSC",
+        "company_name": "Cardiovascular Sciences Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1600.0,
+        "volume": 827.75,
+        "change": 0.0
+    },
+    {
+        "Symbol": "DECN",
+        "company_name": "Decision Diagnostics Corp",
+        "Industry": "Healthcare",
+        "market_cap": 35787.0,
+        "volume": 23514.22310756972,
+        "change": 0.0
+    },
+    {
+        "Symbol": "IMNN",
+        "company_name": "Imunon Inc",
+        "Industry": "Healthcare",
+        "market_cap": 15840990.0,
+        "volume": 825272.2261904762,
+        "change": -1.785712575121809
+    },
+    {
+        "Symbol": "ARYC",
+        "company_name": "Arrayit Corp",
+        "Industry": "Healthcare",
+        "market_cap": 112649.0,
+        "volume": 1215.2988047808765,
+        "change": 0.0
+    },
+    {
+        "Symbol": "CGNH",
+        "company_name": "CardioGenics Holdings Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1921010.0,
+        "volume": 10.01593625498008,
+        "change": 0.0
+    },
+    {
+        "Symbol": "MRPI",
+        "company_name": "Mera Pharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 222919.0,
+        "volume": 26892.54581673307,
+        "change": 0.0
+    },
+    {
+        "Symbol": "NPHC",
+        "company_name": "Nutra Pharma Corp",
+        "Industry": "Healthcare",
+        "market_cap": 759685.0,
+        "volume": 115742.10756972112,
+        "change": 0.0
+    },
+    {
+        "Symbol": "EVIO",
+        "company_name": "EVIO Inc",
+        "Industry": "Healthcare",
+        "market_cap": 1828349.0,
+        "volume": 774495.2749003984,
+        "change": 100.0
+    },
+    {
+        "Symbol": "ULGX",
+        "company_name": "Urologix Inc",
+        "Industry": "Healthcare",
+        "market_cap": 82907.0,
+        "volume": 298.2788844621514,
+        "change": 0.0
+    },
+    {
+        "Symbol": "BMMJ",
+        "company_name": "Body and Mind Inc",
+        "Industry": "Healthcare",
+        "market_cap": 4504530.0,
+        "volume": 74222.31075697212,
+        "change": -70.00000111758708
+    },
+    {
+        "Symbol": "OVIT",
+        "company_name": "OncoVista Innovative Therapies Inc",
+        "Industry": "Healthcare",
+        "market_cap": 558337.0,
+        "volume": 934.9482071713147,
+        "change": -50.0
+    },
+    {
+        "Symbol": "XENO",
+        "company_name": "Xeno Transplants Corp",
+        "Industry": "Healthcare",
+        "market_cap": 64582.0,
+        "volume": 149.402390438247,
+        "change": 0.0
+    },
+    {
+        "Symbol": "ROSGQ",
+        "company_name": "Rosetta Genomics Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 29648.0,
+        "volume": 18.56573705179283,
+        "change": 0.0
+    },
+    {
+        "Symbol": "BGMD",
+        "company_name": "BG Medicine Inc",
+        "Industry": "Healthcare",
+        "market_cap": 545969.0,
+        "volume": 15.936254980079681,
+        "change": 0.0
+    },
+    {
+        "Symbol": "BSSP",
+        "company_name": "Bassline Productions Inc",
+        "Industry": "Healthcare",
+        "market_cap": 37188.0,
+        "volume": 0.0,
+        "change": 0.0
+    },
+    {
+        "Symbol": "CDXI",
+        "company_name": "Cardax Inc",
+        "Industry": "Healthcare",
+        "market_cap": 883.0,
+        "volume": 0.0,
+        "change": 0.0
+    },
+    {
+        "Symbol": "GNCAQ",
+        "company_name": "Genocea Biosciences Inc",
+        "Industry": "Healthcare",
+        "market_cap": 5878.0,
+        "volume": 4781.812749003984,
+        "change": 0.0
+    },
+    {
+        "Symbol": "BIIO",
+        "company_name": "Bionovate Technologies Corp",
+        "Industry": "Healthcare",
+        "market_cap": 775.0,
+        "volume": 135.81673306772907,
+        "change": 0.0
+    },
+    {
+        "Symbol": "OLMM",
+        "company_name": "OneLife Technologies Corp",
+        "Industry": "Healthcare",
+        "market_cap": 110575.0,
+        "volume": 209.62948207171314,
+        "change": 0.0
+    },
+    {
+        "Symbol": "CHALF",
+        "company_name": "Chalice Brands Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 11404280.0,
+        "volume": 445.23107569721117,
+        "change": 1900.0
+    },
+    {
+        "Symbol": "CRRVF",
+        "company_name": "CVR Medical Corp",
+        "Industry": "Healthcare",
+        "market_cap": 1544249.0,
+        "volume": 0.0,
+        "change": 0.0
+    },
+    {
+        "Symbol": "FORZ",
+        "company_name": "Forza Innovations Inc",
+        "Industry": "Healthcare",
+        "market_cap": 252182.0,
+        "volume": 20930909.378486056,
+        "change": 0.0
+    },
+    {
+        "Symbol": "SNNAQ",
+        "company_name": "Sienna Biopharmaceuticals Inc",
+        "Industry": "Healthcare",
+        "market_cap": 3091.0,
+        "volume": 17.07171314741036,
+        "change": 0.0
+    },
+    {
+        "Symbol": "NXNN",
+        "company_name": "Nexeon MedSystems Inc",
+        "Industry": "Healthcare",
+        "market_cap": 78625.0,
+        "volume": 1.0557768924302788,
+        "change": 0.0
+    },
+    {
+        "Symbol": "TOKIF",
+        "company_name": "Optima Medical Innovations Corp",
+        "Industry": "Healthcare",
+        "market_cap": 1779400.0,
+        "volume": 0.0,
+        "change": 0.0
+    },
+    {
+        "Symbol": "TRCNF",
+        "company_name": "Transnational Cannabis Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 70611.0,
+        "volume": 753.7490039840637,
+        "change": 0.0
+    },
+    {
+        "Symbol": "MESO",
+        "company_name": "Mesoblast Ltd",
+        "Industry": "Healthcare",
+        "market_cap": 698260864.0,
+        "volume": 682448.1507936508,
+        "change": 96.77419652551825
+    },
+    {
+        "Symbol": "PFMT",
+        "company_name": "Performant Financial Corp",
+        "Industry": "Healthcare",
+        "market_cap": 295636160.0,
+        "volume": 181015.29365079364,
+        "change": 60.92435880431686
+    },
+    {
+        "Symbol": "AMED",
+        "company_name": "Amedisys Inc",
+        "Industry": "Healthcare",
+        "market_cap": 3184023296.0,
+        "volume": 333570.1468253968,
+        "change": 4.5811401592581795
+    },
+    {
+        "Symbol": "RSCF",
+        "company_name": "Reflect Scientific Inc",
+        "Industry": "Healthcare",
+        "market_cap": 5139845.0,
+        "volume": 30491.575396825396,
+        "change": -33.33333747254461
+    },
+    {
+        "Symbol": "PBYI",
+        "company_name": "Puma Biotechnology Inc",
+        "Industry": "Healthcare",
+        "market_cap": 117221616.0,
+        "volume": 407323.0634920635,
+        "change": -29.498524160909046
+    },
+    {
+        "Symbol": "PHGE",
+        "company_name": "BiomX Inc",
+        "Industry": "Healthcare",
+        "market_cap": 19327464.0,
+        "volume": 86092.65476190476,
+        "change": -71.94805013849953
+    },
+    {
+        "Symbol": "RMD",
+        "company_name": "Resmed Inc",
+        "Industry": "Healthcare",
+        "market_cap": 37153226752.0,
+        "volume": 1146604.3452380951,
+        "change": 66.89328082507642
+    },
+    {
+        "Symbol": "CYH",
+        "company_name": "Community Health Systems Inc",
+        "Industry": "Healthcare",
+        "market_cap": 748908160.0,
+        "volume": 1937889.5833333333,
+        "change": 75.57003204205984
+    }
+]

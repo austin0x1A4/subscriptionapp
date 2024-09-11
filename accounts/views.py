@@ -16,13 +16,20 @@ from django.http import HttpResponse
 
 from .tokens import account_activation_token
 from django.contrib.sites.shortcuts import get_current_site
-
+from django.urls import reverse
 from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
 from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode
 from django.shortcuts import render, redirect
 from .forms import RegistrationForm  # Assuming you have a RegistrationForm
+
+from django.contrib.auth import login
+from django.contrib.auth.models import User
+from django.shortcuts import render, redirect
+from django.utils.http import urlsafe_base64_decode
+from .tokens import account_activation_token
+from django.utils.encoding import force_str
 
 def register(request):
     if request.method == 'POST':
@@ -34,33 +41,36 @@ def register(request):
 
             current_site = get_current_site(request)
             mail_subject = 'Activate your account'
+            uid = urlsafe_base64_encode(force_bytes(user.pk))
+            token = account_activation_token.make_token(user)
+            activation_link = reverse('activate', kwargs={'uidb64': uid, 'token': token})
+            activation_url = f'https://{current_site.domain}{activation_link}'
+
             message = render_to_string('registration/acc_active_email.html', {
                 'user': user,
                 'domain': current_site.domain,
-                'uid': urlsafe_base64_encode(force_bytes(user.pk)),
-                'token': account_activation_token.make_token(user),
+                'uid': uid,
+                'token': token,
+                'activation_url': activation_url,
             })
+
             to_email = form.cleaned_data.get('email')
             email = EmailMessage(mail_subject, message, to=[to_email])
-            email.send()
-            
-            # Redirect to a page indicating the activation email has been sent
-            return render(request, 'registration/activation_sent.html')
+
+            try:
+                email.send()
+                return render(request, 'registration/activation_sent.html')
+            except Exception as e:
+                print(f"Error sending email: {e}")
+                return render(request, 'registration/register.html', {
+                    'form': form,
+                    'error': 'There was an error sending the activation email. Please try again later.'
+                })
     else:
         form = RegistrationForm()
     return render(request, 'registration/register.html', {'form': form})
 
 
-# views.py
-from django.contrib.auth import login
-from django.contrib.auth.models import User
-from django.shortcuts import render, redirect
-from django.utils.http import urlsafe_base64_decode
-
-from .tokens import account_activation_token
-
-from django.utils.encoding import force_str
-from django.utils.http import urlsafe_base64_decode
 
 def activate(request, uidb64, token):
     try:
@@ -68,13 +78,16 @@ def activate(request, uidb64, token):
         user = User.objects.get(pk=uid)
     except (TypeError, ValueError, OverflowError, User.DoesNotExist):
         user = None
+
     if user is not None and account_activation_token.check_token(user, token):
         user.is_active = True
         user.save()
-        
+        # Optional: log in the user immediately after activation
+        # login(request, user)
         return redirect('login')
     else:
         return render(request, 'registration/activation_invalid.html')
+
 
 class ProfileView(LoginRequiredMixin, TemplateView):
     template_name = 'registration/profile.html'

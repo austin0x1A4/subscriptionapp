@@ -1,49 +1,77 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block title %}Subscribe{% endblock %}
+
 {% block content %}
-<div>
-    <h2>Welcome, {{ user.username }}!</h2>  <!-- Display the username here -->
-    <div class="col-md-8 col-lg-6">
-        <div class="card shadow-sm">
-            <div>
-                <form method="post" novalidate>
-                    {% csrf_token %}
-                    {% for field in form %}
-                    <div class="form-group">
-                        {{ field.label_tag }}
-                        {% if field.name == 'investment_amount' %}
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">$</span>
+<div class="container py-10">
+    <h1 class="mb-4 text-left">Welcome, {{ user.username }}!</h1>
+    <div class="row justify-content-left">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h4 mb-0">Subscription Form</h2>
+                </div>
+                <div class="card-body">
+                    <form method="post" novalidate>
+                        {% csrf_token %}
+                        {% for field in form %}
+                            <div class="form-group mb-3">
+                                {{ field.label_tag }}
+
+                                {% if field.name == 'investment_amount' %}
+                                    <div class="input-group">
+                                        <span class="input-group-text">$</span>
+                                        {{ field }}
+                                    </div>
+                                {% else %}
+                                    {{ field }}
+                                {% endif %}
+
+                                {% if field.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {% for error in field.errors %}
+                                            {{ error }}
+                                        {% endfor %}
+                                    </div>
+                                {% elif field.name == 'investment_amount' and message %}
+                                    <div class="invalid-feedback d-block">
+                                        {{ message }}
+                                    </div>
+                                {% endif %}
+
+                                {% if field.help_text %}
+                                    <small class="form-text text-muted">{{ field.help_text | safe }}</small>
+                                {% endif %}
                             </div>
-                            {{ field }}
-                            {% if field.errors %}
-                            <div class="invalid-feedback d-block">
-                                {% for error in field.errors %}
-                                {{ error }}
-                                {% endfor %}
-                            </div>
-                            {% elif message %}
-                            <div class="invalid-feedback d-block">
-                                {{ message }}
-                            </div>
-                            {% endif %}
-                        </div>
-                        {% else %}
-                        <div class="form-control {{ field.field.widget.attrs.css_classes }}">
-                            {{ field }}
-                        </div>
-                        {% endif %}
-                        {% if field.help_text %}
-                        <small class="form-text text-muted">{{ field.help_text }}</small>
-                        {% endif %}
-                    </div>
-                    {% endfor %}
-                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
-                </form>
+                        {% endfor %}
+                        <button type="submit" class="btn btn-primary w-100">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .form-control:focus {
+        border-color: #80bdff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+    .card {
+        border-radius: 0.5rem;
+    }
+    .card-header {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+    }
+    .btn-primary {
+        transition: background-color 0.2s ease-in-out;
+    }
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+</style>
 {% endblock %}

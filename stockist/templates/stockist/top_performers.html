@@ -1,174 +1,56 @@
 {% extends "base.html" %}
-{% load custom_tags %}
 {% load humanize %}
-
 {% block content %}
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .positive {
-            color: green;
-        }
-        .negative {
-            color: red;
-        }
-        .arrow-up::before {
-            content: '↑';
-        }
-        .arrow-down::before {
-            content: '↓';
-        }
-    </style>
-</head>
 <div class="container mt-5">
-    <h1 class="mb-4">Top Performers in the Last Year</h1>
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="ranked-tab" data-bs-toggle="tab" data-bs-target="#ranked" type="button" role="tab" aria-controls="ranked" aria-selected="true">Ranked Companies</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="indices-tab" data-bs-toggle="tab" data-bs-target="#indices" type="button" role="tab" aria-controls="indices" aria-selected="false">Top 10 Indices</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="stocks-tab" data-bs-toggle="tab" data-bs-target="#stocks" type="button" role="tab" aria-controls="stocks" aria-selected="false">Top 10 Stocks</button>
-        </li>
-        {% if user.is_superuser %}
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="upload-tab" data-bs-toggle="tab" data-bs-target="#upload" type="button" role="tab" aria-controls="upload" aria-selected="false">Upload Data</button>
-        </li>
-        {% endif %}
-    </ul>
-
-    <div class="tab-content mt-3" id="myTabContent">
-        <div class="tab-pane fade show active" id="ranked" role="tabpanel" aria-labelledby="ranked-tab">
-            <div class="mb-3">
-                <label for="industry-select" class="form-label">Select Industry:</label>
-                <select class="form-select" id="industry-select" onchange="location = this.value;">
-                    <option value="?industry=All" {% if selected_industry == 'All' %}selected{% endif %}>All</option>
-                    <option value="?industry=Communications" {% if selected_industry == 'Communications' %}selected{% endif %}>Communications</option>
-                    <option value="?industry=Consumers" {% if selected_industry == 'Consumers' %}selected{% endif %}>Consumers</option>
-                    <option value="?industry=Energy" {% if selected_industry == 'Energy' %}selected{% endif %}>Energy</option>
-                    <option value="?industry=Financials" {% if selected_industry == 'Financials' %}selected{% endif %}>Financials</option>
-                    <option value="?industry=Healthcare" {% if selected_industry == 'Healthcare' %}selected{% endif %}>Healthcare</option>
-                    <option value="?industry=Industrials" {% if selected_industry == 'Industrials' %}selected{% endif %}>Industrials</option>
-                    <option value="?industry=Information%20Technology" {% if selected_industry == 'Information Technology' %}selected{% endif %}>Information Technology</option>
-                    <option value="?industry=Materials" {% if selected_industry == 'Materials' %}selected{% endif %}>Materials</option>
-                    <option value="?industry=Real%20Estate" {% if selected_industry == 'Real Estate' %}selected{% endif %}>Real Estate</option>
-                    <option value="?industry=Utilities" {% if selected_industry == 'Utilities' %}selected{% endif %}>Utilities</option>
-                </select>
-            </div>
-            
-            <table class="table table-bordered mt-3">
-                <thead>
-                    <tr>
-                        <th>Company Name</th>
-                        <th>Score</th>
-                        <th>Industry</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for company in companies %}
-                        <tr>
-                            <td>{{ company.company_name }}</td>
-                            <td>{{ company.Score|floatformat:2 }}</td>
-                            <td>{{ company.industry }}</td>
-                        </tr>
-                    {% empty %}
-                        <tr>
-                            <td colspan="3">No companies found.</td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
-        <div class="tab-pane fade" id="indices" role="tabpanel" aria-labelledby="indices-tab">
-            <table class="table table-bordered mt-3">
-                <thead>
-                    <tr>
-                        <th>Index/Commodity</th>
-                        <th>Percentage Change</th>
-                    </tr>
-                </thead>
-                <tbody id="indices-table-body">
-                </tbody>
-            </table>
+    <h1 class="mb-4">Top Performers</h1>
+    
+    <!-- Filter and Sorting Form -->
+    <form method="GET" action="" class="d-flex justify-content-between mb-4">
+        <div>
+            <label for="industry">Industry:</label>
+            <select name="industry" id="industry" class="form-select w-auto" onchange="this.form.submit()">
+                {% for industry in industries %}
+                    <option value="{{ industry }}" {% if selected_industry == industry %}selected{% endif %}>
+                        {{ industry }}
+                    </option>
+                {% endfor %}
+            </select>
         </div>
 
-        <div class="tab-pane fade" id="stocks" role="tabpanel" aria-labelledby="stocks-tab">
-            <table class="table table-bordered mt-3">
-                <thead>
-                    <tr>
-                        <th>Stock</th>
-                        <th>Composite Score</th>
-                        <th>Percentage Change</th>
-                        <th>Market Capitalization</th>
-                        <th>Volume Traded</th>
-                    </tr>
-                </thead>
-                <tbody id="stocks-table-body">
-                </tbody>
-            </table>
+        <div>
+            <label for="sort_by">Sort by:</label>
+            <select name="sort_by" id="sort_by" class="form-select w-auto" onchange="this.form.submit()">
+                <option value="market_cap" {% if selected_sort == 'market_cap' %}selected{% endif %}>Market Capitalization</option>
+                <option value="volume" {% if selected_sort == 'volume' %}selected{% endif %}>Volume</option>
+                <option value="change" {% if selected_sort == 'change' %}selected{% endif %}>Percentage Change</option>
+            </select>
         </div>
+    </form>
 
-        {% if user.is_superuser %}
-        <div class="tab-pane fade" id="upload" role="tabpanel" aria-labelledby="upload-tab">
-            <h3 class="mt-3">Upload File</h3>
-            <form method="post" enctype="multipart/form-data" action="{% url 'upload_file' %}">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" class="btn btn-primary">Upload</button>
-            </form>
-        </div>
-        {% endif %}
-    </div>
+    <!-- Display the Filtered and Sorted Data -->
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Company</th>
+                <th>Industry</th>
+                <th>Market Capitalization</th>
+                <th>Volume Traded</th>
+                <th>Percentage Change</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in stocks_data %}
+            <tr class="{% if stock.change > 0 %}positive{% else %}negative{% endif %}">
+                <td>{{ stock.Symbol }}</td>
+                <td>{{ stock.company_name }}</td>
+                <td>{{ stock.Industry }}</td>
+                <td>{{ stock.market_cap|intcomma }}</td>
+                <td>{{ stock.volume|intcomma }}</td>
+                <td>{{ stock.change }}%</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<script>
-    document.getElementById('indices-tab').addEventListener('click', function() {
-        $.ajax({
-            url: "{% url 'get_top_indices' %}",
-            type: 'GET',
-            success: function(data) {
-                let tableBody = document.getElementById('indices-table-body');
-                tableBody.innerHTML = '';
-                data.top_indices_performers.forEach(function(performer) {
-                    let row = document.createElement('tr');
-                    row.className = performer.change > 0 ? 'positive' : 'negative';
-                    row.innerHTML = `
-                        <td>${performer.name}</td>
-                        <td>${performer.change.toFixed(2)}% <span class="${performer.change > 0 ? 'arrow-up' : 'arrow-down'}"></span></td>
-                    `;
-                    tableBody.appendChild(row);
-                });
-            }
-        });
-    });
-
-    document.getElementById('stocks-tab').addEventListener('click', function() {
-        $.ajax({
-            url: "{% url 'get_top_stocks' %}",
-            type: 'GET',
-            success: function(data) {
-                let tableBody = document.getElementById('stocks-table-body');
-                tableBody.innerHTML = '';
-                data.top_stocks_performers.forEach(function(performer) {
-                    let row = document.createElement('tr');
-                    row.className = performer.change > 0 ? 'positive' : 'negative';
-                    row.innerHTML = `
-                        <td>${performer.name}</td>
-                        <td>${performer.score.toFixed(2)}</td>
-                        <td>${performer.change.toFixed(2)}% <span class="${performer.change > 0 ? 'arrow-up' : 'arrow-down'}"></span></td>
-                        <td>${performer.market_cap.toLocaleString()}</td>
-                        <td>${performer.volume.toLocaleString()}</td>
-                    `;
-                    tableBody.appendChild(row);
-                });
-            }
-        });
-    });
-</script>
-
 {% endblock %}

@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+{% load humanize %}
+{% block content %}
+<title>Stock Dashboard</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Header -->
+<div class="container mx-auto text-center">
+    <h1 class="text-black text-4xl font-bold">Stock Dashboard</h1>
+</div>
+
+<!-- Main Content Wrapper -->
+<div class="container mx-auto px-4 py-8 flex">
+
+    <!-- Left side: Stock table -->
+    <div class="w-3/4 pr-4">
+        <!-- Filter and Sorting Form -->
+        <form method="GET" action="" class="flex justify-between mb-4">
+            <div class="flex items-center">
+                <label for="industry" class="mr-2">Industry:</label>
+                <select name="industry" id="industry" class="form-select w-auto" onchange="this.form.submit()">
+                    <option value="All" {% if selected_industry == 'All' %}selected{% endif %}>All Industries</option>
+                    {% for industry in industries %}
+                    <option value="{{ industry }}" {% if selected_industry == industry %}selected{% endif %}>
+                        {{ industry }}
+                    </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="flex items-center">
+                <label for="sort_by" class="mr-2">Sort by:</label>
+                <select name="sort_by" id="sort_by" class="form-select w-auto" onchange="this.form.submit()">
+                    <option value="market_cap" {% if selected_sort == 'market_cap' %}selected{% endif %}>Market Cap</option>
+                    <option value="volume" {% if selected_sort == 'volume' %}selected{% endif %}>Volume</option>
+                    <option value="change_percent" {% if selected_sort == 'change_percent' %}selected{% endif %}>Percentage Change</option>
+                    <option value="current_price" {% if selected_sort == 'current_price' %}selected{% endif %}>Price</option>
+                </select>
+            </div>
+        </form>
+
+        <!-- Display the Filtered and Sorted Data -->
+        <table class="table-auto w-full text-left bg-white shadow-lg">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">Symbol</th>
+                    <th class="px-4 py-2">Company</th>
+                    <th class="px-4 py-2">Industry</th>
+                    <th class="px-4 py-2">Price</th>
+                    <th class="px-4 py-2">Market Cap</th>
+                    <th class="px-4 py-2">Volume</th>
+                    <th class="px-4 py-2">Change (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stock in page_obj %}
+                <tr class="border-t hover:bg-gray-100">
+                    <td class="px-4 py-2">{{ stock.symbol }}</td>
+                    
+                    <td class="px-4 py-2">{{ stock.name }}</td>
+                    <td class="px-4 py-2">{{ stock.industry }}</td>
+                    <td class="px-4 py-2 text-right">
+                        {% if stock.current_price < 0.01 %}
+                            <span class="text-red-600" title="Extremely low-priced stock">🔴</span>
+                        {% endif %}
+                        ${{ stock.current_price|floatformat:6 }}
+                    </td>
+                    <td class="px-4 py-2">{{ stock.market_cap|intcomma }}</td>
+                    <td class="px-4 py-2">
+                        {% if stock.volume < 1000 %}
+                            <span class="text-yellow-600 font-bold" title="Low trading volume">⚠️ </span>
+                        {% endif %}
+                        {{ stock.volume|intcomma }}
+                    </td>
+                    <td class="px-4 py-2 text-right {% if stock.change_percent > 0 %}text-green-600{% elif stock.change_percent < 0 %}text-red-600{% endif %}">
+                        {{ stock.change_percent|floatformat:2 }}%
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <!-- Improved Pagination Controls -->
+        {% if page_obj.paginator.num_pages > 1 %}
+        <div class="mt-4 flex justify-center">
+            <nav class="inline-block">
+                <ul class="flex list-reset items-center">
+                    {% if page_obj.has_previous %}
+                    <li>
+                        <a href="?page=1&industry={{ selected_industry }}&sort_by={{ selected_sort }}" class="px-3 py-2 bg-gray-200 text-gray-700 rounded-l hover:bg-gray-300">First</a>
+                    </li>
+                    <li>
+                        <a href="?page={{ page_obj.previous_page_number }}&industry={{ selected_industry }}&sort_by={{ selected_sort }}" class="px-3 py-2 bg-gray-200 text-gray-700 hover:bg-gray-300">Previous</a>
+                    </li>
+                    {% else %}
+                    <li><span class="px-3 py-2 bg-gray-100 text-gray-400 rounded-l">First</span></li>
+                    <li><span class="px-3 py-2 bg-gray-100 text-gray-400">Previous</span></li>
+                    {% endif %}
+
+                    {% for i in page_obj.paginator.page_range %}
+                        {% if page_obj.number == i %}
+                            <li><span class="px-3 py-2 bg-blue-500 text-white">{{ i }}</span></li>
+                        {% elif i > page_obj.number|add:'-3' and i < page_obj.number|add:'3' %}
+                            <li><a href="?page={{ i }}&industry={{ selected_industry }}&sort_by={{ selected_sort }}" class="px-3 py-2 bg-gray-200 text-gray-700 hover:bg-gray-300">{{ i }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if page_obj.has_next %}
+                    <li>
+                        <a href="?page={{ page_obj.next_page_number }}&industry={{ selected_industry }}&sort_by={{ selected_sort }}" class="px-3 py-2 bg-gray-200 text-gray-700 hover:bg-gray-300">Next</a>
+                    </li>
+                    <li>
+                        <a href="?page={{ page_obj.paginator.num_pages }}&industry={{ selected_industry }}&sort_by={{ selected_sort }}" class="px-3 py-2 bg-gray-200 text-gray-700 rounded-r hover:bg-gray-300">Last</a>
+                    </li>
+                    {% else %}
+                    <li><span class="px-3 py-2 bg-gray-100 text-gray-400">Next</span></li>
+                    <li><span class="px-3 py-2 bg-gray-100 text-gray-400 rounded-r">Last</span></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+        {% endif %}
+
+        <!-- Display Errors -->
+        {% if errors %}
+        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-8">
+            <strong>Errors:</strong>
+            <ul class="list-disc list-inside">
+                {% for error in errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Right side: Stock widgets -->
+    <div class="w-1/4 pl-4">
+        {% if all_stocks %}
+        <!-- Stock Widgets -->
+        <div class="grid grid-cols-1 gap-8">
+
+            <!-- Top Gainers -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold mb-4 text-gray-700">Top Gainers</h2>
+                <ul class="space-y-4">
+                    {% for stock in top_gainers %}
+                    <li class="flex items-center justify-between">
+                        <div>
+                            <a href="#" class="text-blue-500 font-bold">{{ stock.symbol }}</a>
+                            <p class="text-sm text-gray-500">{{ stock.name }}</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-lg font-semibold">{{ stock.current_price }}</p>
+                            <p class="text-green-500">{{ stock.change_percent|floatformat:2 }}%</p>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- Top Losers -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold mb-4 text-gray-700">Top Losers</h2>
+                <ul class="space-y-4">
+                    {% for stock in top_losers %}
+                    <li class="flex items-center justify-between">
+                        <div>
+                            <a href="#" class="text-blue-500 font-bold">{{ stock.symbol }}</a>
+                            <p class="text-sm text-gray-500">{{ stock.name }}</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-lg font-semibold">{{ stock.current_price }}</p>
+                            <p class="text-red-500">{{ stock.change_percent|floatformat:2 }}%</p>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- Most Active Stocks -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold mb-4 text-gray-700">Most Active</h2>
+                <ul class="space-y-4">
+                    {% for stock in most_active %}
+                    <li class="flex items-center justify-between">
+                        <div>
+                            <a href="#" class="text-blue-500 font-bold">{{ stock.symbol }}</a>
+                            <p class="text-sm text-gray-500">{{ stock.name }}</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-lg font-semibold">{{ stock.current_price }}</p>
+                            <p class="text-green-500">{{ stock.change_percent|floatformat:2 }}%</p>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </div>
+        {% else %}
+        <p class="text-xl text-center mt-16">No valid stock data available. Please check the errors above and try again.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

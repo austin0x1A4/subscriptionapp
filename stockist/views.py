@@ -1,12 +1,16 @@
 from django.shortcuts import render, redirect
 from django.http import JsonResponse, HttpResponseForbidden, HttpResponseRedirect
 from .forms import UploadFileForm
-from .models import Company, IndexPerformance, StockPerformance
+import json
+from django.conf import settings
+import csv
+import yfinance as yf
+from .utils import get_stock_data, validate_stock_symbol
 import os
 import pandas as pd
-import json
-import datetime
-from django.conf import settings
+from django.core.paginator import Paginator
+from django.urls import reverse
+
 
 def upload_file(request):
     if not request.user.is_superuser:
@@ -17,134 +21,133 @@ def upload_file(request):
         if form.is_valid():
             industry = form.cleaned_data['industry']
             handle_uploaded_file(request.FILES['file'], industry)
-            return HttpResponseRedirect('/success/')
+            return HttpResponseRedirect(f"{reverse('upload_file')}?success=1")
     else:
         form = UploadFileForm()
-    return render(request, 'stockist/upload.html', {'form': form})
+
+    # Check if there's a success parameter in the URL to show a message
+    success_message = request.GET.get('success')
+    return render(request, 'stockist/upload.html', {'form': form, 'success_message': success_message})
+
+
 
 def handle_uploaded_file(f, industry):
     upload_dir = os.path.join(settings.MEDIA_ROOT, 'uploads')
     if not os.path.exists(upload_dir):
         os.makedirs(upload_dir)
+    
     file_path = os.path.join(upload_dir, f.name)
     
+    # Save the uploaded file temporarily
     with open(file_path, 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
     
+    # Load the Excel file into a DataFrame
     df = pd.read_excel(file_path)
     df = clean_data(df)
-    ranked_companies = rank_companies(df)
-    save_ranked_companies(ranked_companies, industry)
+
+    # Add the selected 'Industry' as a new column
+    df['Industry'] = industry
+
+    # Define the path to the master CSV file
+    master_file_path = os.path.join(upload_dir, 'master_stock_data.csv')
+
+    # If the master file exists, append to it; otherwise, create a new one
+    if os.path.exists(master_file_path):
+        df.to_csv(master_file_path, mode='a', header=False, index=False)
+    else:
+        df.to_csv(master_file_path, index=False)
+
+    
 
 def clean_data(df):
-    df = df.rename(columns=lambda x: x.strip().replace(" ", "_").replace("Company_Name", "company_name"))
+    print("Columns before renaming:", df.columns)
 
-    numeric_columns = [
-        'Price_Performance_(52_Weeks)',
-        'Total_Return_(1_Yr_Annualized)',
-        'Beta_(1_Year_Annualized)',
-        'Standard_Deviation_(1_Yr_Annualized)'
-    ]
+    # Rename columns
+    df = df.rename(columns={
+        'Company Name': 'company_name',
+        'Symbol': 'Symbol'
+    })
 
-    for col in numeric_columns:
-        df[col] = pd.to_numeric(df[col], errors='coerce')
+    print("Columns after renaming:", df.columns)
 
-    df = df.dropna(subset=numeric_columns)
+    # Retain only the 'Symbol' and 'company_name' columns
+    try:
+        df = df[['Symbol', 'company_name']]
+    except KeyError as e:
+        print(f"KeyError: {e}")
+        raise
+
+    # Drop rows with missing values in 'Symbol' and 'company_name' columns
+    df = df.dropna(subset=['Symbol', 'company_name'])
 
     return df
 
-def rank_companies(df):
-    df['Score'] = (
-        df['Price_Performance_(52_Weeks)'] +
-        df['Total_Return_(1_Yr_Annualized)'] +
-        (1 - df['Beta_(1_Year_Annualized)']) -
-        df['Standard_Deviation_(1_Yr_Annualized)']
-    )
+def stock_dashboard(request):
+    # Path to the saved JSON file
+    json_path = os.path.join(settings.BASE_DIR, 'static', 'json', 'stock_data.json')
     
-    df = df.sort_values(by='Score', ascending=False)
-    return df[['company_name', 'Score']].to_dict('records')
+    try:
+        with open(json_path, 'r') as json_file:
+            stock_data = json.load(json_file)
+    except FileNotFoundError:
+        return render(request, 'stockist/error.html', {'errors': ['Stock data not found. Please run the management command to generate the data.']})
+    except Exception as e:
+        return render(request, 'stockist/error.html', {'errors': [str(e)]})
 
-def save_ranked_companies(ranked_companies, industry):
-    industry_dir = os.path.join(settings.MEDIA_ROOT, 'ranked_companies', industry)
-    if not os.path.exists(industry_dir):
-        os.makedirs(industry_dir)
-    
-    file_path = os.path.join(industry_dir, f'{industry}_ranked_companies.json')
-    with open(file_path, 'w') as f:
-        json.dump(ranked_companies, f)
+    all_stocks = stock_data.get('all_stocks', [])
+    most_active = stock_data.get('most_active', [])
+    top_gainers = stock_data.get('top_gainers', [])
+    top_losers = stock_data.get('top_losers', [])
 
-def top_performers(request):
-    today = datetime.date.today()
-    
-    top_indices_performers = IndexPerformance.objects.filter(date=today).order_by('-change')[:10]
-    top_stocks_performers = StockPerformance.objects.filter(date=today).order_by('-score')[:10]
+    df = pd.DataFrame(all_stocks)
+    df['change_percent'] = pd.to_numeric(df['change_percent'], errors='coerce')
+    df['market_cap'] = pd.to_numeric(df['market_cap'], errors='coerce')
+    df['volume'] = pd.to_numeric(df['volume'], errors='coerce')
+    df['current_price'] = pd.to_numeric(df['current_price'], errors='coerce')
+
+    industries = sorted(set(df['industry'].dropna().unique()))
 
     selected_industry = request.GET.get('industry', 'All')
-
-    all_companies = []
-    industry_dir = os.path.join(settings.MEDIA_ROOT, 'ranked_companies')
-    
-    for industry in os.listdir(industry_dir):
-        if os.path.isdir(os.path.join(industry_dir, industry)):
-            file_path = os.path.join(industry_dir, industry, f'{industry}_ranked_companies.json')
-            if os.path.exists(file_path):
-                with open(file_path, 'r') as f:
-                    companies = json.load(f)
-                    for company in companies:
-                        company['industry'] = industry
-                    all_companies.extend(companies)
+    sort_by = request.GET.get('sort_by', 'change_percent')
 
     if selected_industry != 'All':
-        filtered_companies = [company for company in all_companies if company['industry'] == selected_industry]
+        df = df[df['industry'] == selected_industry]
+
+    if sort_by == 'market_cap':
+        df = df.sort_values(by='market_cap', ascending=False)
+    elif sort_by == 'volume':
+        df = df.sort_values(by='volume', ascending=False)
+    elif sort_by == 'change_percent':
+        df = df.sort_values(by='change_percent', ascending=False)
     else:
-        filtered_companies = sorted(all_companies, key=lambda x: x['Score'], reverse=True)
+        df = df.sort_values(by='current_price', ascending=False)
+    
+    # Convert the filtered data back to a list of dictionaries
+    all_stocks = df.to_dict('records')
+
+    # Paginate the data (20 stocks per page)
+    paginator = Paginator(all_stocks, 20)  # Show 20 stocks per page
+    page_number = request.GET.get('page', 1)  # Get the current page number
+    page_obj = paginator.get_page(page_number)  # Get the page of stocks
 
     context = {
-        'companies': filtered_companies,
-        'user': request.user,
-        'form': UploadFileForm(),
-        'top_indices_performers': top_indices_performers,
-        'top_stocks_performers': top_stocks_performers,
-        'selected_industry': selected_industry
+        'page_obj': page_obj,  # Pass the page object to the template
+        'all_stocks': df.to_dict('records'),
+        'industries': industries,
+        'selected_industry': selected_industry,
+        'selected_sort': sort_by,
+        'most_active': most_active,
+        'top_gainers': top_gainers,
+        'top_losers': top_losers,
     }
 
-    return render(request, 'stockist/top_performers.html', context)
+    return render(request, 'stockist/stock_dashboard.html', context)
 
-def get_companies_by_industry(request):
-    industry = request.GET.get('industry', 'All')
-    industry_dir = os.path.join(settings.MEDIA_ROOT, 'ranked_companies')
-    companies = []
 
-    if industry != 'All':
-        file_path = os.path.join(industry_dir, industry, f'{industry}_ranked_companies.json')
-        if os.path.exists(file_path):
-            with open(file_path, 'r') as f:
-                companies = json.load(f)
-    else:
-        for ind in os.listdir(industry_dir):
-            file_path = os.path.join(industry_dir, ind, f'{ind}_ranked_companies.json')
-            if os.path.exists(file_path):
-                with open(file_path, 'r') as f:
-                    ind_companies = json.load(f)
-                    for company in ind_companies:
-                        company['industry'] = ind
-                    companies.extend(ind_companies)
 
-    return JsonResponse(companies, safe=False)
 
 def success(request):
     return render(request, 'stockist/success.html')
 
-def get_top_indices(request):
-    #today = datetime.date.today()
-    top_indices_performers = IndexPerformance.objects.order_by('-change')[:10]
-    indices_data = [{'name': performer.name, 'change': performer.change} for performer in top_indices_performers]
-    return JsonResponse({'top_indices_performers': indices_data})
-
-def get_top_stocks(request):
-    #today = datetime.date.today()
-    top_stocks_performers = StockPerformance.objects.order_by('-score')[:10]
-    stocks_data = [{'name': performer.name, 'score': performer.score, 'change': performer.change, 
-                    'market_cap': performer.market_cap, 'volume': performer.volume} for performer in top_stocks_performers]
-    return JsonResponse({'top_stocks_performers': stocks_data})

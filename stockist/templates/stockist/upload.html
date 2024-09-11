@@ -1,10 +1,72 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Upload File</h1>
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Upload</button>
-</form>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>File Upload</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.5/cdn.min.js" defer></script>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md" x-data="uploadForm()">
+        <h1 class="text-2xl font-bold mb-6 text-center text-gray-800">Upload File</h1>
+        
+        <!-- Success Message -->
+        {% if success_message %}
+        <div class="bg-green-100 text-green-800 p-4 rounded-lg mb-4">
+            File uploaded successfully!
+        </div>
+        {% endif %}
+
+        <!-- File upload form -->
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <!-- File input -->
+            <div class="mb-4">
+                <label for="file" class="block text-sm font-medium text-gray-700 mb-2">Choose a file</label>
+                <div class="relative">
+                    <input type="file" id="file" name="file" @change="handleFileChange" class="hidden" accept=".csv, .xlxs, .xls" required>
+                    <label for="file" class="cursor-pointer bg-white border border-gray-300 rounded-md py-2 px-4 inline-flex items-center w-full justify-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        <span x-text="fileName || 'Select a file'"></span>
+                    </label>
+                </div>
+                <p class="mt-1 text-xs text-gray-500">Accepted file types: CSV, XLXS, XLS</p>
+            </div>
+            
+            <!-- Industry dropdown -->
+            <div class="mb-4">
+                <label for="industry" class="block text-sm font-medium text-gray-700 mb-2">Select Industry</label>
+                <select id="industry" name="industry" class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                    <option value="" selected disabled>Select an industry</option>
+                    {% for key, value in form.industry.field.choices %}
+                        <option value="{{ key }}">{{ value }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Upload
+            </button>
+        </form>
+    </div>
+</body>
+
+<script>
+    function uploadForm() {
+        return {
+            fileName: '',
+            handleFileChange(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    this.fileName = file.name;
+                } else {
+                    this.fileName = '';
+                }
+            }
+        }
+    }
+</script>
 {% endblock %}

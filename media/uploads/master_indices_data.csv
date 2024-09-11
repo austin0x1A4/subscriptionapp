@@ -1,0 +1,21 @@
+name,ticker
+S&P 500,^GSPC
+Dow Jones,^DJI
+DAX,^GDAXI
+CAC 40,^FCHI
+EURO STOXX 50,^STOXX50E
+Nikkei,^N225
+Hang Seng,^HSI
+Russell 2000,^RUT
+SENSEX,^BSESN
+Nifty Bank,^NSEBANK
+Copper Futures,HG=F
+Nifty 50,^NSEI
+NASDAQ,^IXIC
+FTSE 100,^FTSE
+FTSE All-Share,^FTAS
+Shanghai Composite,^SSEC
+BSE Sensex,^BSESN
+S&P/TSX Composite Index,^GSPTSE
+S&P/ASX 200,^AXJO
+Bovespa Index,^BVSP

@@ -10,7 +10,7 @@ from django.contrib.auth.views import (
 
 from accounts.views import ProfileView, register, activate, account_settings, change_info
 from subscription.views import home_view, subscribe, success_page, others, account_balance, ContactView
-from stockist.views import top_performers, upload_file, success, get_companies_by_industry, get_top_indices, get_top_stocks
+from stockist.views import stock_dashboard, upload_file, success
 from analyst.views import stock_analysis
  
 urlpatterns = [
@@ -34,14 +34,13 @@ urlpatterns = [
     path('account_balance/', account_balance, name='account_balance'),
     path('others/', others, name='others'),
     path('success/', success_page, name='success'),
-    path('top10/', top_performers, name='top10'),
+    path('top10/', stock_dashboard, name='top10'),
     path('contact/', ContactView.as_view(), name='contact'),
 
     path('upload/', upload_file, name='upload_file'),
-    path('api/get_companies_by_industry/', get_companies_by_industry, name='get_companies_by_industry'),
+    
     path('success/', success, name='success'),
-    path('get_top_indices/', get_top_indices, name='get_top_indices'),
-    path('get_top_stocks/', get_top_stocks, name='get_top_stocks'),
+    
     path('analysis/', stock_analysis, name='analysis'),
 ]
 if settings.DEBUG:

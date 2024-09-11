@@ -52,6 +52,9 @@
                 <a href="{% url 'top10' %}" class="nav-link">Top 10</a>
                 <a href="{% url 'analysis' %}" class="nav-link">Stock Analysis</a>
                 <a href="{% url 'home' %}" class="nav-link">Other</a>
+                {% if user.is_superuser %}
+                <a href="{% url 'upload_file' %}" class="nav-link">Upload Data</a>
+                {% endif %}
             {% endif %}
         </nav>
     </div>
